@@ -12,6 +12,7 @@
     <name>Chapter1-1-1</name>
     <description>Hello Spring Boot</description>
 
+    <!--版本统一采用 2.0.3.RELEASE -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -23,14 +24,8 @@
         <java.version>1.8</java.version>
     </properties>
 
-
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
+        <!-- 唯一需要依赖，默认就内嵌了Tomcat容器，如需要更换容器Jetty、Undertow也极其简单-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -40,6 +35,7 @@
 
     <build>
         <plugins>
+            <!-- 编译插件 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
