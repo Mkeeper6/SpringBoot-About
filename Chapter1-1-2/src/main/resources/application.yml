@@ -1,0 +1,6 @@
+## 多环境配置，激活哪套配置
+spring:
+  profiles:
+    active: pro
+
+

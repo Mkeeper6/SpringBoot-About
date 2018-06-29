@@ -1,0 +1,10 @@
+# 服务相关配置
+server:
+  # 服务端口配置
+  port: 8080
+  # 服务根路径配置
+  servlet:
+    context-path: /dev
+
+# 开启debug模式
+debug: true
