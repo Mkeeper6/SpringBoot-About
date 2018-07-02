@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @PropertySource("classpath:user.properties")
 @ConfigurationProperties(prefix = "company.user")
-public class UserPropertiesConfig {
+public class UserProperties {
 
     private String name;
     private Integer age;
@@ -31,7 +31,7 @@ public class UserPropertiesConfig {
 
     @Override
     public String toString() {
-        return "TestPropertiesConfig{" +
+        return "UserProperties {" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
