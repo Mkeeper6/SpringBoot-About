@@ -8,7 +8,9 @@ import java.util.*;
 @Component
 public class UserDao {
     private static Integer count = 0;
-    private static Map<Integer, User> userMap = new HashMap<>();
+
+    // 线程安全的Map
+    private static Map<Integer, User> userMap = Collections.synchronizedMap(new HashMap<>());
 
     static {
         userMap.put(++count, User.builder().userId(count).name("Mkeeper").age(28).address("wuhan").build());
