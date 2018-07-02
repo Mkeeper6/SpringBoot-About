@@ -6,7 +6,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+//指定配置文件，如果不指定，默认解析“application.yml”
 @PropertySource("classpath:user.properties")
+//前缀
 @ConfigurationProperties(prefix = "company.user")
 public class UserProperties {
 
