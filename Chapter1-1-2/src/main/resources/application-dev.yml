@@ -1,7 +1,7 @@
 # 服务相关配置
 server:
   # 服务端口配置
-  port: 8080
+  port: 8888
   # 服务根路径配置
   servlet:
     context-path: /dev
