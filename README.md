@@ -19,4 +19,4 @@
 - 多环境如何配置
 - 自定义配置文件
 
-## 2 SpringBoot web
+## 2 SpringBoot web开发

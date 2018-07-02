@@ -4,16 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mkeeper</groupId>
-    <artifactId>Chapter1-1-2</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>../Chapter2-1-1</module>
-    </modules>
+    <artifactId>Chapter2-1-1</artifactId>
 
     <name>Chapter1-1-2</name>
-    <description>Spring Boot常用配置介绍</description>
+    <description>Spring Boot web开发</description>
 
     <!--版本统一采用 2.0.3.RELEASE -->
     <parent>
@@ -53,5 +47,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
