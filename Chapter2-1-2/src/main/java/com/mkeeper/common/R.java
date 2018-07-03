@@ -11,15 +11,15 @@ import java.io.Serializable;
 public class R<T> implements Serializable {
 
     private T data; //服务端数据
-    private int status = ResultCode.SUCCESS.getCode(); //状态码
+    private int status = 0; //状态码，0：成功，1：失败
     private String msg = ""; //描述信息
 
     public static R isOk() {
-        return new R().msg(ResultCode.SUCCESS.getMsg());
+        return new R().msg("成功");
     }
 
     public static R isFail() {
-        return new R().status(ResultCode.FAIL.getCode()).msg(ResultCode.FAIL.getMsg());
+        return new R().status(1).msg("失败");
     }
 
     public static R isFail(Throwable e) {
