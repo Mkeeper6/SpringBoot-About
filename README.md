@@ -23,6 +23,9 @@
 
 ## 2 SpringBoot web开发
 #### 2.1.1 搭建RESTful风格web服务
+- RESTful风格介绍
+- 使用SpringBoot，快速搭建RESTful风格Web服务
+
 #### 2.1.2 统一响应处理(未完成)
 #### 2.1.3 统一异常处理(未完成)
 
