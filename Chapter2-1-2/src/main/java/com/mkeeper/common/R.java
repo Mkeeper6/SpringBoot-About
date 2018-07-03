@@ -6,9 +6,6 @@ import java.io.Serializable;
 
 /**
  *    通用响应体
- *
- * @author liulei2
- * @create 2018/6/8 13:49
  */
 @Data
 public class R<T> implements Serializable {

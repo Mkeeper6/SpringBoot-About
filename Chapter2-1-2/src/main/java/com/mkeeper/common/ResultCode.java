@@ -1,11 +1,5 @@
 package com.mkeeper.common;
 
-/**
- *    通用前端状态返回码和信息
- *
- * @author liulei2
- * @create 2018/6/8 17:44
- */
 public enum ResultCode {
 
     SUCCESS("执行成功", 0),
