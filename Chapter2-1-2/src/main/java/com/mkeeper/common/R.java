@@ -17,7 +17,6 @@ public class R<T> implements Serializable {
     private int status = ResultCode.SUCCESS.getCode(); //状态码
     private String msg = ""; //描述信息
 
-    //APIS
     public static R isOk() {
         return new R().msg(ResultCode.SUCCESS.getMsg());
     }
