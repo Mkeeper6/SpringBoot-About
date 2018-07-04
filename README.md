@@ -10,7 +10,7 @@
 
 ## 1 项目搭建
 - [1.1.1 SpringBoot 项目搭建](https://my.oschina.net/Mkeeper/blog/1838580)
-- 1.1.2 常用配置介绍
+- [1.1.2 常用配置介绍](https://my.oschina.net/Mkeeper/blog/1839763)
 - 1.1.3 多模块项目搭建(未完成)
 
 ## 2 SpringBoot web开发
