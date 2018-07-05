@@ -2,8 +2,8 @@
 <configuration debug="true">
 
     <!--占位符定义-->
-    <!--占位符定义：名称，命名规范 wsd-name-java-->
-    <property name="appName" value="wsd-open-platform-management-java" />
+    <!--占位符定义：应用名称-->
+    <property name="appName" value="demo" />
 
     <!-- 彩色日志依赖的渲染类 -->
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
@@ -54,20 +54,11 @@
         <appender-ref ref="FILE" />
     </root>
 
-
+    <!--多环境日志配置-->
     <!--线上环境-->
     <!--<springProfile name="pro">
-        &lt;!&ndash; 日志输出级别，根节点&ndash;&gt;
         <root level="info">
-            <appender-ref ref="FILE_STAT" />
-            <appender-ref ref="FILE_ACTUATOR" />
-        </root>
-    </springProfile>-->
-
-    <!--测试环境-->
-    <!--<springProfile name="dev,live,trunk">
-        <root level="info">
-            <appender-ref ref="FILE_ACTUATOR" />
+            <appender-ref ref="FILE" />
         </root>
     </springProfile>-->
 
@@ -77,8 +68,6 @@
             <appender-ref ref="CONSOLE_LOCAL" />
         </root>
     </springProfile>-->
-
-
 
     <!--自定义，日志输出级别，子节点-->
     <!-- 指定项目中某个包，当有日志操作行为时的日志记录级别 -->
