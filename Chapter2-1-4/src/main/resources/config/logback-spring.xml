@@ -10,9 +10,18 @@
     <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
     <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
 
-    <!--占位符定义：彩色日志格式-->
-    <property name="PATTERN" value="-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}" />
-    <!--<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />-->
+    <!--
+        yyyy-MM-dd HH:mm:ss.SSS: 日志时间
+        LOG_LEVEL_PATTERN： 日志级别
+        PID： 进程id
+        t： 线程名
+        logger: 打印日志类名
+        LOG_EXCEPTION_CONVERSION_WORD： 日志转换器
+    -->
+    <!--占位符定义：控制台彩色日志格式-->
+    <property name="CONSOLE_LOG_PATTERN" value="${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+    <!--占位符定义：文件日志格式-->
+    <property name="FILE_LOG_PATTERN" value="${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
 
     <!--占位符定义：日志文件路径，文件-->
     <property name="FILE_PATH" value="./../logs" />
@@ -22,11 +31,10 @@
     <appender name="CONSOLE_LOCAL" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <!-- pattern节点，用来设置日志的输入格式 -->
-            <pattern>${PATTERN}</pattern>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
             <charset>UTF-8</charset>
         </encoder>
     </appender>
-
 
     <!--日志输出的目的地：文件，线上定位问题使用-->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -36,11 +44,10 @@
             <MaxHistory>100</MaxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>${PATTERN}</pattern>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
             <charset>UTF-8</charset>
         </encoder>
     </appender>
-
 
     <root level="info">
         <appender-ref ref="CONSOLE_LOCAL" />
