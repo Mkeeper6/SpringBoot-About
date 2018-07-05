@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+    <!--占位符定义-->
+    <!--占位符定义：名称，命名规范 wsd-name-java-->
+    <property name="appName" value="wsd-open-platform-management-java" />
+
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+
+    <!--占位符定义：彩色日志格式-->
+    <property name="PATTERN" value="-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}" />
+    <!--<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />-->
+
+    <!--占位符定义：日志文件路径，文件-->
+    <property name="FILE_PATH" value="./../logs" />
+
+    <!--日志输出的目的地-->
+    <!--日志输出的目的地：控制台，本地启服务使用-->
+    <appender name="CONSOLE_LOCAL" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- pattern节点，用来设置日志的输入格式 -->
+            <pattern>${PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+
+    <!--日志输出的目的地：文件，线上定位问题使用-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${FILE_PATH}/${appName}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${FILE_PATH}/${appName}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <MaxHistory>100</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+
+    <root level="info">
+        <appender-ref ref="CONSOLE_LOCAL" />
+        <appender-ref ref="FILE" />
+    </root>
+
+
+    <!--线上环境-->
+    <!--<springProfile name="pro">
+        &lt;!&ndash; 日志输出级别，根节点&ndash;&gt;
+        <root level="info">
+            <appender-ref ref="FILE_STAT" />
+            <appender-ref ref="FILE_ACTUATOR" />
+        </root>
+    </springProfile>-->
+
+    <!--测试环境-->
+    <!--<springProfile name="dev,live,trunk">
+        <root level="info">
+            <appender-ref ref="FILE_ACTUATOR" />
+        </root>
+    </springProfile>-->
+
+    <!--本地环境-->
+    <!--<springProfile name="dev">
+        <root level="info">
+            <appender-ref ref="CONSOLE_LOCAL" />
+        </root>
+    </springProfile>-->
+
+
+
+    <!--自定义，日志输出级别，子节点-->
+    <!-- 指定项目中某个包，当有日志操作行为时的日志记录级别 -->
+    <!-- com.douyu为根包，也就是只要是发生在这个根包下面的所有日志操作行为的权限都是DEBUG -->
+    <!-- 级别依次为【从高到低】：FATAL > ERROR > WARN > INFO > DEBUG > TRACE  -->
+    <!--<logger name="com.douyu" level="DEBUG">
+        <appender-ref ref="CONSOLE_LOCAL" />
+    </logger>-->
+
+</configuration>

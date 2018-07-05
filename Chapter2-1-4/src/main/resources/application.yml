@@ -1,0 +1,7 @@
+spring:
+  output:
+    ansi:
+      enabled: detect
+
+logging:
+  config: classpath:config/logback-spring.xml
