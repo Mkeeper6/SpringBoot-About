@@ -1,7 +1,3 @@
-spring:
-  output:
-    ansi:
-      enabled: detect
-
+# logback配置文件路径
 logging:
   config: classpath:config/logback-spring.xml
