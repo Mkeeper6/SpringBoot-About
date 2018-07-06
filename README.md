@@ -14,7 +14,7 @@
 - 1.1.3 多模块项目搭建(未完成)
 
 ## 2 SpringBoot web开发
-- 2.1.1 搭建RESTful风格web服务
+- 2.1.1 [搭建RESTful风格web服务](https://my.oschina.net/Mkeeper/blog/1841375)
 - 2.1.2 Controller规范及响应规范
 - 2.1.3 异常处理规范
 - 2.1.4 日志规范
