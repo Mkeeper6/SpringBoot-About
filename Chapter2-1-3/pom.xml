@@ -38,6 +38,7 @@
             <optional>true</optional>
         </dependency>
 
+        <!--该依赖只会在编译时调用-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
