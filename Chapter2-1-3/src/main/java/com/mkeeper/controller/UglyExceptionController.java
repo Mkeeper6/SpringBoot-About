@@ -16,6 +16,7 @@ public class UglyExceptionController {
     public Map<String, String> ugly(){
         Map<String, String> result = new HashMap<>();
         // TODO 直接捕获所有代码块，然后在 cache
+
         try {
             int i = 10 / 0;
             result.put("code", "200");
