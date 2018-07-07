@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
-@ControllerAdvice
+// 如果要验证BadException 和 UglyException请注释@ControllerAdvice
+ @ControllerAdvice
 public class GlobalExceptionHandler {
 
     @ResponseBody
