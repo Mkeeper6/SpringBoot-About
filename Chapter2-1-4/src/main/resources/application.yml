@@ -1,10 +1,17 @@
 debug: false
 
 logging:
+  file:
+    #max-size: 10
+    #max-history: 10
   level:
-    com.mkeeper.controller.off:
-      # 也可以改变某个包下的日志输出等级，只需要将'OFF'改成对应等级即可。
-      'off'
+    #path: /
+    #file: mymy.log
+    #com.mkeeper: debug
+    #也可以改变某个包下的日志输出等级，只需要将'OFF'改成对应等级即可。
+    com.mkeeper.controller.off: 'off'
+
+
 
 spring:
   output:
