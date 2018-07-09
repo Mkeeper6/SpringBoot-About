@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+    <!--占位符定义-->
+    <!--占位符定义：应用名称-->
+    <property name="appName" value="demo" />
+
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+
+    <!--
+        yyyy-MM-dd HH:mm:ss.SSS: 日志时间
+        LOG_LEVEL_PATTERN： 日志级别
+        PID： 进程id
+        t： 线程名
+        logger: 打印日志类名
+        LOG_EXCEPTION_CONVERSION_WORD： 日志转换器
+    -->
+    <!--占位符定义：控制台彩色日志格式-->
+    <property name="CONSOLE_LOG_PATTERN" value="${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+    <!--占位符定义：文件日志格式-->
+    <property name="FILE_LOG_PATTERN" value="${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+
+    <!--占位符定义：日志文件路径，文件-->
+    <property name="FILE_PATH" value="./../logs" />
+
+    <!--日志输出的目的地-->
+    <!--日志输出的目的地：控制台，本地启服务使用-->
+    <appender name="CONSOLE_LOCAL" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- pattern节点，用来设置日志的输入格式 -->
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--日志输出的目的地：文件，线上定位问题使用-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${FILE_PATH}/${appName}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${FILE_PATH}/${appName}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <MaxHistory>100</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE_LOCAL" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!--多环境日志配置-->
+    <!--线上环境-->
+    <!--<springProfile name="pro">
+        <root level="info">
+            <appender-ref ref="FILE" />
+        </root>
+    </springProfile>-->
+
+    <!--本地环境-->
+    <!--<springProfile name="dev">
+        <root level="info">
+            <appender-ref ref="CONSOLE_LOCAL" />
+        </root>
+    </springProfile>-->
+
+</configuration>
