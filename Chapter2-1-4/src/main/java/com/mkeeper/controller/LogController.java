@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 public class LogController {
+
     //如果不想每次都写private final Logger logger = LoggerFactory.getLogger(XXX.class); 可以用注解@Slf4j
     //private final Logger logger = LoggerFactory.getLogger(LogController.class)
 
