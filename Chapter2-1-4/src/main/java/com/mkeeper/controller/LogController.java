@@ -10,6 +10,7 @@ public class LogController {
 
     @GetMapping("/log")
     public void log(){
+        log.debug("debug:");
         log.info("info:");
         log.warn("warn:");
         log.error("error:");

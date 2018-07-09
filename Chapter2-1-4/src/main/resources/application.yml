@@ -1,3 +1,10 @@
 # logback配置文件路径；如果配置文件放在根目录，则无需配置
 logging:
   config: classpath:config/logback-spring.xml
+debug: true
+spring:
+  output:
+    ansi:
+      enabled: detect
+
+
