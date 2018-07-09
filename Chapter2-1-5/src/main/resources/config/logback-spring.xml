@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true">
 
-    <!--占位符定义-->
-    <!--占位符定义：应用名称-->
-    <property name="appName" value="demo" />
+    <!-- 读取 spring.application.name 属性来生成日志文件名
+        scope：作用域
+        name：在 logback-spring.xml 使用的键
+        source：application.properties 文件中的键，也可以时启动参数：java -jar xxx.jar -Dspring.application.appName=xxx
+     defaultValue：默认值
+     -->
+    <springProperty scope="context" name="appName" source="spring.application.appName" defaultValue="appName.log"/>
 
     <!-- 彩色日志依赖的渲染类 -->
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
@@ -56,17 +60,18 @@
 
     <!--多环境日志配置-->
     <!--线上环境-->
-    <!--<springProfile name="pro">
-        <root level="info">
-            <appender-ref ref="FILE" />
-        </root>
-    </springProfile>-->
-
-    <!--本地环境-->
-    <!--<springProfile name="dev">
+    <springProfile name="pro">
         <root level="info">
             <appender-ref ref="CONSOLE_LOCAL" />
+            <appender-ref ref="FILE" />
         </root>
-    </springProfile>-->
+    </springProfile>
+
+    <!-- 开发环境日志级别为DEBUG/并且开发环境不写日志文件 -->
+    <springProfile name="dev">
+        <root level="debug">
+            <appender-ref ref="CONSOLE_LOCAL" />
+        </root>
+    </springProfile>
 
 </configuration>
