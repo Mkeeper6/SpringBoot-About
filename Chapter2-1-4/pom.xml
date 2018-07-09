@@ -25,19 +25,20 @@
 
 
     <dependencies>
-        <!-- 唯一需要依赖，默认就内嵌了Tomcat容器，如需要更换容器Jetty、Undertow也极其简单-->
+        <!--唯一需要依赖，默认就内嵌了Tomcat容器，如需要更换容器Jetty、Undertow也极其简单-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--该依赖只会在编译时调用-->
+        <!--optional表示该依赖只影响项目A, 如果有项目B依赖了A，则这两个依赖不会被传递；-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
 
+        <!--该依赖只会在编译时调用-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -45,17 +46,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>net.logstash.logback</groupId>
-            <artifactId>logstash-logback-encoder</artifactId>
-            <version>4.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
-        </dependency>
 
     </dependencies>
 

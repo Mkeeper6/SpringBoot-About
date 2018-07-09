@@ -1,14 +1,11 @@
-# logback配置文件路径；如果配置文件放在根目录，则无需配置
+
+debug: false
+
 logging:
-  config: classpath:config/logback-spring.xml
   level:
     com.mkeeper.controller.off:
       # 也可以改变某个包下的日志输出等级，只需要将'OFF'改成对应等级即可。
       'off'
-
-
-debug: false
-
 
 spring:
   output:
