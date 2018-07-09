@@ -31,13 +31,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--optional表示该依赖只影响项目A, 如果有项目B依赖了A，则这两个依赖不会被传递；-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-
         <!--该依赖只会在编译时调用-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -45,7 +38,6 @@
             <version>1.16.20</version>
             <scope>provided</scope>
         </dependency>
-
 
     </dependencies>
 

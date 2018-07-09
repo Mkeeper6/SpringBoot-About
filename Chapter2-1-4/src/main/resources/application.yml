@@ -1,18 +1,16 @@
+# 改配置配置只对 嵌入式容器、Spring、Hibernate生效
 debug: false
 
 logging:
-  file:
-    #max-size: 10
-    #max-history: 10
   level:
-    #path: /
-    #file: mymy.log
-    #com.mkeeper: debug
-    #也可以改变某个包下的日志输出等级，只需要将'OFF'改成对应等级即可。
-    com.mkeeper.controller.off: 'off'
+    # org.springframework.web目录下日志级别debug
+    org.springframework.web: debug
+    # com.mkeeper目录下日志级别info
+    com.mkeeper: info
+    # com.mkeeper.controller.off目录下日志关闭
+    com.mkeeper.controller.off: off
 
-
-
+# 颜色日志配置
 spring:
   output:
     ansi:

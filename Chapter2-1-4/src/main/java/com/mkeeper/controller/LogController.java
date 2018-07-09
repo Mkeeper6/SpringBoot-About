@@ -4,10 +4,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//如果不想每次都写private final Logger logger = LoggerFactory.getLogger(XXX.class); 可以用注解@Slf4j
 @Slf4j
 @RestController
 public class LogController {
+    //如果不想每次都写private final Logger logger = LoggerFactory.getLogger(XXX.class); 可以用注解@Slf4j
+    //private final Logger logger = LoggerFactory.getLogger(LogController.class)
 
     @GetMapping("/log")
     public void log(){
