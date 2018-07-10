@@ -11,7 +11,7 @@
 ## 1 项目搭建
 - [1.1.1 SpringBoot 项目搭建](https://my.oschina.net/Mkeeper/blog/1838580)
 - [1.1.2 常用配置介绍](https://my.oschina.net/Mkeeper/blog/1839763)
-- 1.1.3 多模块项目搭建(未完成)
+- 1.1.3 
 
 ## 2 SpringBoot web开发
 - 2.1.1 [搭建RESTful风格web服务](https://my.oschina.net/Mkeeper/blog/1841375)
@@ -23,6 +23,19 @@
 - 2.1.7 数据验证-基础数据验证
 - 2.1.8 数据验证-自定义日期格式验证
 - 2.1.9 数据验证-分组验证
+- 2.1.10 文件上传(未完成)
+- 2.1.11 文件下载(未完成)
 
 ## 3 SpringBoot 定时任务
+- 3.1.1 Timer(未完成)
+- 3.1.2 @Scheduled @Async(未完成)
+- 3.1.3 Quartz单点(未完成)
+- 3.1.4 Quartz分布式(未完成)
+- 3.1.5 elastic-job(未完成)
+
+## 进阶篇
+
+- Lombok(未完成)
+- 多模块项目搭建(未完成)
+
 
