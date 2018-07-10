@@ -12,14 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @PostMapping("/user")
-    public R addUser(@Validated @RequestBody User user, BindingResult br){
+    public R addUser(@Validated @RequestBody User user, BindingResult br) {
 
-        if(br.hasErrors()){
+        if (br.hasErrors()) {
             return R.isFail().msg(br.getFieldError().getDefaultMessage());
         } else {
 
             return R.isOk().data(user);
         }
     }
-
 }

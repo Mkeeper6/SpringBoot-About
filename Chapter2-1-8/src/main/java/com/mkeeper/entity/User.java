@@ -13,8 +13,10 @@ public class User {
     @Length(min = 4, max = 10, message = "name 长度必须在 {min} - {max} 之间")
     private String name;
 
+
     @NotNull(message = "生日不能为空")
     @DateTime(format = "yyyyMMdd", message = "格式错误，正确格式为：yyyyMMdd")
     private String birthday;
+
 
 }

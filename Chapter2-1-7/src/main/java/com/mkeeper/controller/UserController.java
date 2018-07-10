@@ -5,11 +5,13 @@ import com.mkeeper.entity.User;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.NotBlank;
 
-@Validated
 @RestController
 public class UserController {
 
@@ -29,7 +31,7 @@ public class UserController {
     public R test2(
             @NotBlank(message = "name 不能为空")
             @Length(min = 2, max = 10, message = "name 长度必须在 {min} - {max} 之间")
-            String name ) {
+                    String name ) {
 
         return R.isOk().data(name);
     }
