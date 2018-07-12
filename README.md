@@ -52,5 +52,6 @@
 - Lombok(未完成)
 - 多模块项目搭建(未完成)
 - swagger前后端分离接口文档工具介绍(未完成)
+- Actuator & Admin
 
 
