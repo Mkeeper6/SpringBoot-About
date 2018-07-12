@@ -27,18 +27,18 @@
 - 2.1.11 文件下载(未完成)
 
 ## 3 SpringBoot 定时任务
-- 3.1.1 Timer(未完成)
-- 3.1.2 @Scheduled @Async(未完成)
-- 3.1.3 Quartz单点(未完成)
-- 3.1.4 Quartz分布式(未完成)
-- 3.1.5 elastic-job(未完成)
+- 3.1.1 Timer(未完成)/ScheduledExecutorService/SpringTask(未完成)
+- 3.1.2 Quartz单点(未完成)
+- 3.1.3 Quartz分布式(未完成)
+- 3.1.4 elastic-job(未完成)
 
 # 4 SpringBoot 数据库开发
 - 4.1.1 JdbcTemplate(未完成)
-- 4.1.1 Mybatis(未完成)
-- 4.1.1 SpringDataJpa(未完成)
-- 4.1.1 多数据源(未完成)
-- 4.1.1 Sharding jdbc(未完成)
+- 4.1.2 Mybatis(未完成)
+- 4.1.3 SpringDataJpa(未完成)
+- 4.1.4 使用Druid作为SpringBoot项目数据源（添加监控）
+- 4.1.5 多数据源(未完成)
+- 4.1.6 Sharding jdbc分库分表(未完成)
 
 
 # 5 SpringBoot 缓存
@@ -48,7 +48,6 @@
 # 7 SpringBoot 消息队列
 
 ## 进阶篇
-
 - Lombok(未完成)
 - 多模块项目搭建(未完成)
 - swagger前后端分离接口文档工具介绍(未完成)
