@@ -34,6 +34,12 @@
 - 3.1.5 elastic-job(未完成)
 
 # 4 SpringBoot 数据库开发
+- 4.1.1 JdbcTemplate(未完成)
+- 4.1.1 Mybatis(未完成)
+- 4.1.1 SpringDataJpa(未完成)
+- 4.1.1 多数据源(未完成)
+- 4.1.1 Sharding jdbc(未完成)
+
 
 # 5 SpringBoot 缓存
 
