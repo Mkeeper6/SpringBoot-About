@@ -26,7 +26,7 @@
 - 2.1.10 文件上传
 
 ## 3 SpringBoot 定时任务
-- 3.1.1 Timer(未完成)/ScheduledExecutorService/SpringTask(未完成)
+- 3.1.1 定时任务普通方法介绍(Time/ScheduledExecutorService/SpringTask)
 - 3.1.2 Quartz单点(未完成)
 - 3.1.3 Quartz分布式(未完成)
 - 3.1.4 elastic-job(未完成)
