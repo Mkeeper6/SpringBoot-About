@@ -19,16 +19,15 @@ import java.util.Map;
 @RequestMapping
 public class FileUploadController {
 
-
     @GetMapping("/index")
     public String index() {
         return "index";
     }
 
 
-    @PostMapping("/upload1")
+    @PostMapping("/uploadOne")
     @ResponseBody
-    public Map<String, String> upload1(@RequestParam("file") MultipartFile file) throws IOException {
+    public Map<String, String> uploadOne(@RequestParam("file") MultipartFile file) throws IOException {
         log.info("[文件类型] - [{}]", file.getContentType());
         log.info("[文件名称] - [{}]", file.getOriginalFilename());
         log.info("[文件大小] - [{}]", file.getSize());
@@ -41,9 +40,9 @@ public class FileUploadController {
         return result;
     }
 
-    @PostMapping("/upload2")
+    @PostMapping("/uploadMulti")
     @ResponseBody
-    public List<Map<String, String>> upload2(@RequestParam("file") MultipartFile[] files) throws IOException {
+    public List<Map<String, String>> uploadMulti(@RequestParam("file") MultipartFile[] files) throws IOException {
         if (files == null || files.length == 0) {
             return null;
         }
@@ -60,9 +59,9 @@ public class FileUploadController {
         return results;
     }
 
-    @PostMapping("/upload3")
+    @PostMapping("/uploadBase")
     @ResponseBody
-    public void upload2(String base64) throws IOException {
+    public void uploadBase(String base64) throws IOException {
         // TODO BASE64 方式的 格式和名字需要自己控制（如 png 图片编码后前缀就会是 data:image/png;base64,）
         final File tempFile = new File("E:\\temp\\test.jpg");
         // TODO 防止有的传了 data:image/png;base64, 有的没传的情况
