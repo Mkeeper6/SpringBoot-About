@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Mkeeper
  */
 @SpringBootApplication
-public class Chapter219Application {
+public class Chapter2110Application {
     public static void main(String[] args) {
-        SpringApplication.run(Chapter219Application.class, args);
+        SpringApplication.run(Chapter2110Application.class, args);
     }
 }

@@ -10,7 +10,7 @@
 
 
 
-    <name>Chapter2-1-9</name>
+    <name>Chapter2-1-10</name>
     <description>Spring Boot web开发</description>
 
     <!--版本统一采用 2.0.3.RELEASE -->
@@ -39,6 +39,11 @@
             <artifactId>lombok</artifactId>
             <version>1.16.20</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
     </dependencies>
