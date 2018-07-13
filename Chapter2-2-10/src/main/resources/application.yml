@@ -1,10 +1,18 @@
 spring:
   thymeleaf:
+    # 禁用 thymeleaf 缓存
     cache: false
   servlet:
     multipart:
+      # 是否支持批量上传   (默认值 true)
       enabled: true
-      max-file-size: 1
-      max-request-size: 1
+      # 上传文件的临时目录 （一般情况下不用特意修改）
+      location:
+      # 上传文件最大为 10M （默认值 1M 根据自身业务自行控制即可）
+      max-file-size: 10MB
+      # 上传请求最大为 10M（默认值10M 根据自身业务自行控制即可）
+      max-request-size: 10MB
+      # 文件大小阈值，当大于这个阈值时将写入到磁盘，否则存在内存中，（默认值0 一般情况下不用特意修改）
       file-size-threshold: 0
+      # 判断是否要延迟解析文件（相当于懒加载，一般情况下不用特意修改）
       resolve-lazily: false
