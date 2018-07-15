@@ -17,7 +17,7 @@
 - 2.1.2 [Controller规范及响应规范](https://my.oschina.net/Mkeeper/blog/1842381)
 - 2.1.3 [异常处理规范](https://my.oschina.net/Mkeeper/blog/1842492)
 - 2.1.4 [日志规范-基础配置详解](https://my.oschina.net/Mkeeper/blog/1845746)
-- 2.1.5 日志规范-logback配置详解
+- 2.1.5 [日志规范-logback配置详解](https://my.oschina.net/Mkeeper/blog/1853649)
 - 2.1.6 日志规范-使用AOP统一处理Web日志
 - 2.1.7 数据验证-基础数据验证
 - 2.1.8 数据验证-自定义日期格式验证
