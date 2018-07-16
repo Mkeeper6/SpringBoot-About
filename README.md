@@ -11,14 +11,13 @@
 ## 1 项目搭建
 - [1.1.1 SpringBoot 项目搭建](https://my.oschina.net/Mkeeper/blog/1838580)
 - [1.1.2 常用配置介绍](https://my.oschina.net/Mkeeper/blog/1839763)
-- 1.1.3 
 
 ## 2 SpringBoot web开发
 - 2.1.1 [搭建RESTful风格web服务](https://my.oschina.net/Mkeeper/blog/1841375)
 - 2.1.2 [Controller规范及响应规范](https://my.oschina.net/Mkeeper/blog/1842381)
 - 2.1.3 [异常处理规范](https://my.oschina.net/Mkeeper/blog/1842492)
 - 2.1.4 [日志规范-基础配置详解](https://my.oschina.net/Mkeeper/blog/1845746)
-- 2.1.5 日志规范-logback配置详解
+- 2.1.5 [日志规范-logback配置详解](https://my.oschina.net/Mkeeper/blog/1853649)
 - 2.1.6 日志规范-使用AOP统一处理Web日志
 - 2.1.7 数据验证-基础数据验证
 - 2.1.8 数据验证-自定义日期格式验证
@@ -27,9 +26,10 @@
 
 ## 3 SpringBoot 定时任务
 - 3.1.1 定时任务普通方法介绍(Time/ScheduledExecutorService/SpringTask)
-- 3.1.2 Quartz单点(未完成)
-- 3.1.3 Quartz分布式(未完成)
-- 3.1.4 elastic-job(未完成)
+- 3.1.2 Quartz定时任务整合(未完成)
+- 3.1.3 Quartz单点持久化定时任务(未完成)
+- 3.1.4 Quartz分布式持久化定时任务(未完成)
+- 3.1.5 elastic-job(未完成)
 
 # 4 SpringBoot 数据库开发
 - 4.1.1 JdbcTemplate(未完成)
