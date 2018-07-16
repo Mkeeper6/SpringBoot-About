@@ -1,36 +1,25 @@
 package com.mkeeper.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.mkeeper.common.R;
 import com.mkeeper.entity.User;
-import org.hibernate.validator.constraints.Length;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.constraints.NotBlank;
-
-@Validated
+@Slf4j
 @RestController
 public class UserController {
 
     @PostMapping("/user")
-    public R addUser(@Validated @RequestBody User user, BindingResult br){
+    public R addUser(@RequestBody User user){
+        log.info("user: {}", JSON.toJSONString(user));
 
-        if(br.hasErrors()){
-            return R.isFail().msg(br.getFieldError().getDefaultMessage());
-        } else {
+        R r = R.isOk().data(user);
 
-            return R.isOk().data(user);
-        }
+        log.info("result: {}", JSON.toJSONString(user));
+        return r;
     }
 
-
-    @GetMapping("/user")
-    public R test2(
-            @NotBlank(message = "name 不能为空")
-            @Length(min = 2, max = 10, message = "name 长度必须在 {min} - {max} 之间")
-            String name ) {
-
-        return R.isOk().data(name);
-    }
 }
