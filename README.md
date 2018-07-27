@@ -27,8 +27,8 @@
 ## 3 SpringBoot 定时任务
 - 3.1.1 定时任务普通方法介绍(Time/ScheduledExecutorService/SpringTask)
 - 3.1.2 Quartz定时任务整合
-- 3.1.3 Quartz单点持久化定时任务(未完成)
-- 3.1.4 Quartz分布式持久化定时任务(未完成)
+- 3.1.3 Quartz定时任务单点持久化
+- 3.1.4 Quartz定时任务分布式持久化(未完成)
 - 3.1.5 elastic-job(未完成)
 
 # 4 SpringBoot 数据库开发
