@@ -1,0 +1,12 @@
+regCenter:
+  serverList: localhost:2181
+  namespace: elastic-job-lite-springboot
+stockJob:
+  cron: 0/5 * * * * ?
+  shardingItemParameters: 0=Chengdu0,1=Chengdu1
+  shardingTotalCount: 2
+debug: true
+
+#stockJob.cron为定时任务的cron表达式
+#stockJob.shardingItemParameters为任务分片携带的参数
+#stockJob.shardingTotalCount为任务的分数量（即同时同时开几个定时任务）
