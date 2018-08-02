@@ -34,10 +34,12 @@
 # 4 SpringBoot 数据库开发
 - 4.1.1 JdbcTemplate(未完成)
 - 4.1.2 Mybatis(未完成)
-- 4.1.3 SpringDataJpa(未完成)
-- 4.1.4 使用Druid作为SpringBoot项目数据源（添加监控）
-- 4.1.5 多数据源(未完成)
-- 4.1.6 Sharding jdbc分库分表(未完成)
+- 4.1.3 MybatisPlus(未完成)
+- 4.1.4 SpringDataJpa(未完成)
+- 4.1.5 SpringBoot Mybatis Druid 多数据(未完成)
+- 4.1.6 Sharding Jdbc动态数据源(未完成)
+- 4.1.7 Sharding Jdbc读写分离(未完成)
+- 4.1.8 Sharding Jdbc分库分表(未完成)
 
 # 5 SpringBoot 缓存
 
