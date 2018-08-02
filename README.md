@@ -30,6 +30,7 @@
 - 3.1.3 Quartz定时任务单点持久化
 - 3.1.4 Quartz定时任务分布式持久化(未完成)
 - 3.1.5 elastic-job(未完成)
+- 3.1.6 xxl-job(未完成)
 
 # 4 SpringBoot 数据库开发
 - 4.1.1 JdbcTemplate(未完成)
