@@ -35,7 +35,7 @@
 # 4 SpringBoot 数据库开发
 - 4.1.1 JdbcTemplate(未完成)
 - 4.1.2 Mybatis(未完成)
-- 4.1.3 MybatisPlus(未完成)
+- 4.1.3 快速上手Mybatis-Plus(未完成)
 - 4.1.4 SpringDataJpa(未完成)
 - 4.1.5 SpringBoot Mybatis Druid 多数据(未完成)
 - 4.1.6 Sharding Jdbc动态数据源(未完成)
