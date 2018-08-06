@@ -1,9 +1,34 @@
 spring:
+# 数据库配置
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/springboot?useSSL=false
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: 1234
+    name: open_platform_management
+    type: com.alibaba.druid.pool.DruidDataSource
+    #druid相关配置
+    druid:
+      #监控统计拦截的filters
+      filters: stat
+      driver-class-name: com.mysql.jdbc.Driver
+      #基本属性
+      url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      username: root
+      password: 123456
+      #配置初始化大小/最小/最大
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      #获取连接等待超时时间
+      max-wait: 60000
+      #间隔多久进行一次检测，检测需要关闭的空闲连接
+      time-between-eviction-runs-millis: 60000
+      #一个连接在池中最小生存的时间
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
 
 #mybatis
 mybatis-plus:
@@ -30,15 +55,15 @@ mybatis-plus:
     #自定义sql注入器,不在推荐使用此方式进行配置,请使用自定义bean注入
     sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
     #自定义填充策略接口实现,不在推荐使用此方式进行配置,请使用自定义bean注入
-    meta-object-handler: com.baomidou.springboot.MyMetaObjectHandler
+    #meta-object-handler: com.baomidou.springboot.MyMetaObjectHandler
     #自定义SQL注入器
     #sql-injector: com.baomidou.springboot.xxx
     # SQL 解析缓存，开启后多租户 @SqlParser 注解生效
-    sql-parser-cache: true
+    #sql-parser-cache: true
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
 #logging
 logging:
-  level: warn
+  level: debug
 
