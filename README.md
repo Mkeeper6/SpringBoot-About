@@ -3,6 +3,7 @@
 - 我的博客：http://www.mkeeper.club/
 - GitHub：https://github.com/Mkeeper6
 - Gitee: https://gitee.com/Mkeeper
+- QQ交流群1：858298732
 - 我的公众号：
 
 ![公众号](https://oscimg.oschina.net/oscnet/e8870411cf89e55a4b07e131382e0f51e73.jpg)
@@ -20,7 +21,7 @@
 - 2.1.5 [日志规范-logback配置详解](http://www.mkeeper.club/2018/07/09/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B2-1-5%20%E6%97%A5%E5%BF%97%E8%A7%84%E8%8C%83-logback%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/)
 - 2.1.6 [日志规范-使用AOP统一处理Web日志](http://www.mkeeper.club/2018/07/15/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B2-1-6%20%E6%97%A5%E5%BF%97%E8%A7%84%E8%8C%83-%E4%BD%BF%E7%94%A8AOP%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86Web%E6%97%A5%E5%BF%97/)
 - 2.1.7 [数据验证-基础数据验证](http://www.mkeeper.club/2018/07/24/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B2-1-7%20%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81/)
-- 2.1.8 数据验证-自定义日期格式验证
+- 2.1.8 [数据验证-自定义日期格式验证](http://www.mkeeper.club/2018/08/06/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B2-1-8%20%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E9%AA%8C%E8%AF%81/)
 - 2.1.9 数据验证-分组验证
 - 2.1.10 文件上传 
 
