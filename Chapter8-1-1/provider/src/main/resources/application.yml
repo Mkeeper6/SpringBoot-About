@@ -1,0 +1,11 @@
+#ZooKeeper
+dubbo:
+  registry:
+    address: localhost:2181
+
+logging:
+  level: debug
+
+
+
+

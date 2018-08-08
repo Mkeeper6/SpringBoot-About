@@ -49,6 +49,8 @@
 
 # 7 SpringBoot 消息队列
 
+# 8 SpringBoot Dubbo
+
 ## 进阶篇
 - Lombok(未完成)
 - 多模块项目搭建(未完成)
