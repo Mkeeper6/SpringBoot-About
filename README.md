@@ -47,7 +47,7 @@
 
 # 6 SpringBoot NoSQL
 
-# 7 SpringBoot 消息队列
+# 7 SpringBoot RocketMQ
 
 # 8 SpringBoot Dubbo
 
@@ -56,5 +56,6 @@
 - 多模块项目搭建(未完成)
 - swagger前后端分离接口文档工具介绍(未完成)
 - Actuator & Admin
+- nginx 负载均衡本地模拟
 
 
