@@ -48,8 +48,10 @@
 # 6 SpringBoot NoSQL
 
 # 7 SpringBoot RocketMQ
+- 7.1.1 SpringBoot RocketMQ快速整合
 
 # 8 SpringBoot Dubbo
+- 8.1.1 SpringBoot Dubbo快速整合
 
 ## 进阶篇
 - Lombok(未完成)
