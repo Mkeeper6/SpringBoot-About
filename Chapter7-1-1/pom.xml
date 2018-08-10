@@ -8,10 +8,10 @@
     <artifactId>Chapter7-1-1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <name>Chapter7-1-1</name>
     <description>Spring Boot RocketMQ</description>
 
+    <!--版本统一采用 2.0.3.RELEASE -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -22,6 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
     </properties>
+
 
     <dependencies>
 
@@ -58,6 +59,7 @@
 
     <build>
         <plugins>
+            <!-- 编译插件 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

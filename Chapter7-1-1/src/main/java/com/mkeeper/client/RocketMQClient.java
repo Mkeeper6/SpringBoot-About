@@ -40,7 +40,7 @@ public class RocketMQClient {
 
             //创建一个消息实例，包含 topic、tag 和 消息体
             //如下：topic 为 "TopicTest"，tag 为 "push"
-            Message message = new Message("TopicTest", "push", "发送消息----zhisheng-----".getBytes(RemotingHelper.DEFAULT_CHARSET));
+            Message message = new Message("TopicTest", "push", "发送消息----Mkeeper-----".getBytes(RemotingHelper.DEFAULT_CHARSET));
 
             StopWatch stop = new StopWatch();
             stop.start();
