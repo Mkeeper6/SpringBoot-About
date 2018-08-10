@@ -9,3 +9,5 @@ apache:
     # NameServer地址
     namesrvAddr: 192.168.162.129:9876
 debug: true
+logging:
+  level: debug
