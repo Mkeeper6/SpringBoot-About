@@ -7,4 +7,5 @@ apache:
     producer:
       producerGroup: Producer
     # NameServer地址
-    namesrvAddr: localhost:9876
+    namesrvAddr: 192.168.162.129:9876
+debug: true
