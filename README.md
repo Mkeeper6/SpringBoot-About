@@ -52,6 +52,8 @@
 
 # 8 SpringBoot Dubbo
 - 8.1.1 SpringBoot Dubbo快速整合
+- 8.1.2 SpringBoot Dubbo快速整合，使用Dubbo官方starter
+
 
 ## 进阶篇
 - Lombok(未完成)
