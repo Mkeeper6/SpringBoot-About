@@ -1,29 +1,60 @@
 package com.mkeeper.rocketmq.consumer;
 
+
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
-import org.apache.rocketmq.client.consumer.listener.ConsumeOrderlyContext;
-import org.apache.rocketmq.client.consumer.listener.ConsumeOrderlyStatus;
-import org.apache.rocketmq.client.consumer.listener.MessageListenerOrderly;
+import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
+import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
+import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
+import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.message.MessageExt;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
+public class RocketMQConsumer {
+    public static void main(String[] args) throws MQClientException {
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("example_group_name");
+
+        consumer.setNamesrvAddr("192.168.162.129:9876");
+
+        consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
+
+        consumer.subscribe("TopicTest", "*");
+
+        consumer.registerMessageListener(new MessageListenerConcurrently() {
+
+            @Override
+            public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> msgs,
+                                                            ConsumeConcurrentlyContext context) {
+                System.out.printf("%s Receive New Messages: %s %n", Thread.currentThread().getName(), msgs);
+                return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
+            }
+        });
+
+        consumer.start();
+
+        System.out.println("Consumer Started.%n");
+
+    }
+}
+
+
+/*
 @Component
 public class RocketMQConsumer {
-    /**
+    */
+/**
      * 消费者的组名
-     */
+     *//*
+
     @Value("${apache.rocketmq.consumer.PushConsumer}")
     private String consumerGroup;
 
-    /**
+    */
+/**
      * NameServer 地址
-     */
+     *//*
+
     @Value("${apache.rocketmq.namesrvAddr}")
     private String namesrvAddr;
 
@@ -63,4 +94,4 @@ public class RocketMQConsumer {
 
         System.out.printf("Consumer Started.%n");
     }
-}
+}*/
