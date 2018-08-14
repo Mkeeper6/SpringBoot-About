@@ -1,11 +1,13 @@
 package com.mkeeper;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
 public class DubboProviderMain {
     public static void main(String[] args) {
-        SpringApplication.run(DubboProviderMain.class, args);
+        new SpringApplicationBuilder(DubboProviderMain.class)
+                .web(false)
+                .run(args);
     }
 }
