@@ -8,6 +8,7 @@ public class Chapter511Main {
 
     public static void main(String[] args) throws Exception {
 //        SpringApplication.run(Chapter511Main.class, args);
+
         ExpressRunner runner = new ExpressRunner();
         DefaultContext<String, Object> context = new DefaultContext<String, Object>();
         context.put("a",1);
