@@ -28,11 +28,10 @@ public class FileUploadController {
     @PostMapping("/uploadOne")
     @ResponseBody
     public Map<String, String> uploadOne(@RequestParam("file") MultipartFile file) throws IOException {
-        log.info("[文件类型] - [{}]", file.getContentType());
-        log.info("[文件名称] - [{}]", file.getOriginalFilename());
-        log.info("[文件大小] - [{}]", file.getSize());
         // TODO 将文件写入到指定目录（具体开发中有可能是将文件写入到云存储/或者指定目录通过 Nginx 进行 gzip 压缩和反向代理，此处只是为了演示故将地址写成本地电脑指定目录）
+
         file.transferTo(new File("E:\\temp\\" + file.getOriginalFilename()));
+
         Map<String, String> result = new HashMap<>(16);
         result.put("contentType", file.getContentType());
         result.put("fileName", file.getOriginalFilename());
@@ -48,7 +47,7 @@ public class FileUploadController {
         }
         List<Map<String, String>> results = new ArrayList<>();
         for (MultipartFile file : files) {
-            // TODO Spring Mvc 提供的写入方式
+            // TODO
             file.transferTo(new File("E:\\temp\\" + file.getOriginalFilename()));
             Map<String, String> map = new HashMap<>(16);
             map.put("contentType", file.getContentType());
@@ -56,18 +55,25 @@ public class FileUploadController {
             map.put("fileSize", file.getSize() + "");
             results.add(map);
         }
+
         return results;
     }
 
     @PostMapping("/uploadBase")
     @ResponseBody
-    public void uploadBase(String base64) throws IOException {
+    public Map<String, String> uploadBase(String base64) throws IOException {
         // TODO BASE64 方式的 格式和名字需要自己控制（如 png 图片编码后前缀就会是 data:image/png;base64,）
         final File tempFile = new File("E:\\temp\\test.jpg");
         // TODO 防止有的传了 data:image/png;base64, 有的没传的情况
         String[] d = base64.split("base64,");
         final byte[] bytes = Base64Utils.decodeFromString(d.length > 1 ? d[1] : d[0]);
         FileCopyUtils.copy(bytes, tempFile);
+
+        Map<String, String> result = new HashMap<>(16);
+        result.put("contentType", tempFile.getAbsolutePath());
+        result.put("fileName", tempFile.getName());
+        result.put("fileSize", String.valueOf(tempFile.getTotalSpace()));
+        return result;
 
     }
 }
