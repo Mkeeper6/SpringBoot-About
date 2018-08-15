@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Chapter415Main {
 
     public static void main(String[] args) {
+
         SpringApplication.run(Chapter415Main.class, args);
     }
 }
