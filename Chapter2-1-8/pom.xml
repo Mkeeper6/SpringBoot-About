@@ -25,7 +25,6 @@
         <java.version>1.8</java.version>
     </properties>
 
-
     <dependencies>
         <!-- 唯一需要依赖，默认就内嵌了Tomcat容器，如需要更换容器Jetty、Undertow也极其简单-->
         <dependency>
