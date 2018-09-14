@@ -10,6 +10,7 @@ import org.apache.rocketmq.remoting.common.RemotingHelper;
 public class RocketMQProducer{
 
     public static void main(String[] args) throws MQClientException, InterruptedException {
+
         DefaultMQProducer producer = new DefaultMQProducer("example_group_name");
 
         producer.setNamesrvAddr("192.168.162.129:9876");
@@ -18,7 +19,6 @@ public class RocketMQProducer{
 
         for (int i = 0; i < 1000; i++) {
             try {
-
                 /*
                  * 注意：手动创建topic（sh bin/mqadmin updateTopic -n localhost:9876 -c DefaultCluster -t TopicTest）
                  * Create a message instance, specifying topic, tag and message body.
