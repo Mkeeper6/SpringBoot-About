@@ -1,0 +1,11 @@
+# yml配置的优先级高于java配置；如果yml配置和java配置同时存在，则yml配置会覆盖java配置
+####restTemplate的yml配置开始####
+---
+spring:
+  restTemplate:
+    maxTotalConnect: 1000 #连接池的最大连接数，0代表不限；如果取0，需要考虑连接泄露导致系统崩溃的后果
+    maxConnectPerRoute: 200
+    connectTimeout: 3000
+    readTimeout: 5000
+    charset: UTF-8
+####restTemplate的 yml配置开始####

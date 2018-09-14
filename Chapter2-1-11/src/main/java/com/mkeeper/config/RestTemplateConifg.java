@@ -24,6 +24,7 @@ import java.nio.charset.Charset;
 import java.util.LinkedList;
 import java.util.List;
 
+// 必备
 @Configuration
 @ConfigurationProperties(prefix = "spring.restTemplate")
 @ConditionalOnClass(value = {RestTemplate.class, CloseableHttpClient.class})

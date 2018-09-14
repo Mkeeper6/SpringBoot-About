@@ -21,6 +21,7 @@ public class GetTestController {
     @Resource
     private RestTemplate restTemplate;
 
+    //最简单的get操作
     @GetMapping("/baidu1/{key}")
     public String get1(@PathVariable String key) throws UnsupportedEncodingException {
         String encodeKey = URLEncoder.encode(key, "UTF-8");
@@ -30,6 +31,7 @@ public class GetTestController {
         return restTemplate.getForObject(url, String.class); //返回百度主站html
     }
 
+    //需要自定义header头的get操作
     @GetMapping("/baidu2/{key}")
     public String get2(@PathVariable String key) throws UnsupportedEncodingException {
         HttpHeaders headers = new HttpHeaders();
