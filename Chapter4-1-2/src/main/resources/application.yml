@@ -34,7 +34,7 @@ mybatis:
   #Mapper.xml所在的位置
   mapper-locations: classpath:mapping/*.xml
   #entity扫描的包名
-  type-aliases-package: wsd.java.springboot2.model
+  type-aliases-package: com.mkeeper.entity
 
 #pagehelper分页插件配置
 pagehelper:
