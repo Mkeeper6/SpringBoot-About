@@ -28,7 +28,7 @@ import java.util.List;
 @Configuration
 @ConfigurationProperties(prefix = "spring.restTemplate")
 @ConditionalOnClass(value = {RestTemplate.class, CloseableHttpClient.class})
-public class RestTemplateConifg {
+public class RestTemplateConfig {
 
     // java配置的优先级低于yml配置；如果yml配置不存在，会采用java配置
     // ####restTemplate的 java配置开始####

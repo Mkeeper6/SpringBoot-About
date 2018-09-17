@@ -37,12 +37,13 @@
 # 4 SpringBoot 数据库开发
 - 4.1.1 JdbcTemplate(未完成)
 - 4.1.2 SpringBoot Mybatis快速整合
-- 4.1.3 SpringBoot Mybatis-Plus快速整合
-- 4.1.4 SpringDataJpa(未完成)
-- 4.1.5 SpringBoot Mybatis Druid 多数据(未完成)
-- 4.1.6 Sharding Jdbc动态数据源(未完成)
-- 4.1.7 Sharding Jdbc读写分离(未完成)
-- 4.1.8 Sharding Jdbc分库分表(未完成)
+- 4.1.3 Mybatis generator界面工具介绍
+- 4.1.4 SpringBoot Mybatis-Plus快速整合
+- 4.1.5 SpringDataJpa(未完成)
+- 4.1.6 SpringBoot Mybatis Druid 多数据(未完成)
+- 4.1.7 Sharding Jdbc动态数据源(未完成)
+- 4.1.8 Sharding Jdbc读写分离(未完成)
+- 4.1.9 Sharding Jdbc分库分表(未完成)
 
 # 5 SpringBoot 缓存
 
