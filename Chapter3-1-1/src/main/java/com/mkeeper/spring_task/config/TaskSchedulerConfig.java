@@ -26,6 +26,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 @EnableScheduling
 @Configuration
 public class TaskSchedulerConfig {
+
     /**
      * 很关键：默认情况下 TaskScheduler 的 poolSize = 1
      *

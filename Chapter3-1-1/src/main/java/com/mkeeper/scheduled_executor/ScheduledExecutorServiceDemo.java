@@ -15,7 +15,8 @@ public class ScheduledExecutorServiceDemo {
     public static void main(String[] args) {
         final ScheduledExecutorService service = Executors.newScheduledThreadPool(3);
 
-        // 参数：1、具体执行的任务
+        // 参数：
+        // 1、具体执行的任务
         // 2、首次执行的延时时间
         // 3、任务执行间隔
         // 4、间隔时间单位

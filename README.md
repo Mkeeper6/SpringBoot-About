@@ -27,9 +27,9 @@
 - 2.1.11 [RestTemplate整合HttpClient](http://www.mkeeper.club/2018/09/17/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B2-1-11%20RestTemplate%E6%95%B4%E5%90%88HttpClient/)
 
 ## 3 SpringBoot 定时任务
-- 3.1.1 定时任务普通方法介绍(Time/ScheduledExecutorService/SpringTask)
-- 3.1.2 Quartz定时任务整合
-- 3.1.3 Quartz定时任务单点持久化
+- 3.1.1 简单定时任务方法介绍
+- 3.1.2 Quartz定时任务快速上手
+- 3.1.3 Quartz定时任务单点持久化方法介绍
 - 3.1.4 Quartz定时任务分布式持久化(未完成)
 - 3.1.5 elastic-job(未完成)
 - 3.1.6 xxl-job(未完成)
@@ -56,11 +56,11 @@
 
 
 # 7 SpringBoot RocketMQ
-- 7.1.1 SpringBoot RocketMQ快速整合
+- 7.1.1 RocketMQ快速整合
 
 # 8 SpringBoot Dubbo
-- 8.1.1 SpringBoot Dubbo快速整合
-- 8.1.2 SpringBoot Dubbo快速整合，使用Dubbo官方starter
+- 8.1.1 Dubbo快速整合
+
 
 
 ## 进阶篇
