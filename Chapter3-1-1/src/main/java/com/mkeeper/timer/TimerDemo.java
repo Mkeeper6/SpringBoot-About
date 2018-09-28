@@ -5,7 +5,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * 基于 Timer 实现的定时调度，基本就是手撸代码，目前应用较少，不是很推荐
+ *    基于 Timer 实现的定时调度，基本就是手撸代码，目前应用较少，不是很推荐
+ *
+ * @author Mkeeper
+ * @create 2018/9/28 11:12
  */
 public class TimerDemo {
 
