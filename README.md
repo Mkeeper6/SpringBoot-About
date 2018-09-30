@@ -31,7 +31,7 @@
 - 3.1.2 Quartz定时任务快速上手
 - 3.1.3 Quartz定时任务单点持久化方法介绍
 - 3.1.4 xxl-job任务调度平台快速上手
-- 3.1.5 elastic-job快速上手
+- 3.1.5 elastic-job-lite快速上手
 
 # 4 SpringBoot 数据库开发
 - 4.1.1 JdbcTemplate(未完成)
