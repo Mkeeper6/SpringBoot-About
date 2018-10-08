@@ -1,6 +1,6 @@
 package com.mkeeper.quartz.config;
 
-import com.mkeeper.quartz.UploadTask;
+import com.mkeeper.quartz.task.UploadTask;
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

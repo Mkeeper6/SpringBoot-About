@@ -1,4 +1,4 @@
-package com.mkeeper.quartz;
+package com.mkeeper.quartz.task;
 
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.DisallowConcurrentExecution;
@@ -6,6 +6,7 @@ import org.quartz.JobExecutionContext;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 import java.util.concurrent.TimeUnit;
+
 
 @DisallowConcurrentExecution //禁止任务并行
 @Slf4j
