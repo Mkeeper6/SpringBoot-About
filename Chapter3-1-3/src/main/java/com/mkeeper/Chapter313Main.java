@@ -10,7 +10,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @DisallowConcurrentExecution
 public class Chapter313Main {
-
     public static void main(String[] args) {
         SpringApplication.run(Chapter313Main.class, args);
     }
