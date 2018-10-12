@@ -36,37 +36,52 @@
 # 4 SpringBoot 数据库开发
 - 4.1.1 JdbcTemplate(未完成)
 - 4.1.2 SpringBoot Mybatis快速整合
-- 4.1.3 Mybatis generator界面工具介绍
-- 4.1.4 SpringBoot Mybatis-Plus快速整合
-- 4.1.5 SpringDataJpa(未完成)
-- 4.1.6 SpringBoot Mybatis Druid 多数据(未完成)
-- 4.1.7 Sharding Jdbc动态数据源(未完成)
-- 4.1.8 Sharding Jdbc读写分离(未完成)
-- 4.1.9 Sharding Jdbc分库分表(未完成)
+- 4.1.3 SpringBoot Mybatis-Plus快速整合
+- 4.1.4 SpringDataJpa(未完成)
+- 4.1.5 SpringBoot Mybatis Druid 多数据(未完成)
+- 4.1.6 Sharding Jdbc动态数据源(未完成)
+- 4.1.7 Sharding Jdbc读写分离(未完成)
+- 4.1.8 Sharding Jdbc分库分表(未完成)
 
 # 5 SpringBoot 缓存
 - 5.1.1 Spring Cache
-- 5.1.2 Spring Cache Redis
+- 5.1.2 Spring Cache EhCache(未完成)
+- 5.1.3 Spring Cache Redis(未完成)
+- 5.1.4 Spring Cache EhCache Redis 两级缓存
 
 
 # 6 SpringBoot NoSQL
-- 6.1.1 SpringBoot Redis
-- 6.1.2 SpringBoot MongoDb
+- 6.1.1 Redis(未完成)
+- 6.1.2 MongoDb(未完成)
+- 6.1.3 Elasticsearch(未完成)
+- 6.1.2 MongoDb(未完成)
 
 
-# 7 SpringBoot RocketMQ
+# 7 SpringBoot 消息队列
 - 7.1.1 RocketMQ快速整合
+- 7.1.1 Kafka
 
 # 8 SpringBoot Dubbo
 - 8.1.1 Dubbo快速整合
 
+# 9 SpringBoot Session
+
+# 10 SpringBoot Security
+
+# 11 SpringBoot WebSockets
+
+# 12 SpringBoot Actuator
+
+# 13 SpringBoot Testing
 
 
-## 进阶篇
+## 工具篇
 - Lombok(未完成)
-- 多模块项目搭建(未完成)
+- Mybatis generator界面工具介绍
+- Maven多模块项目搭建(未完成)
 - swagger前后端分离接口文档工具介绍(未完成)
-- Actuator & Admin
-- nginx 负载均衡本地模拟
+- Nginx 负载均衡本地模拟
+- Git
+- 
 
 
