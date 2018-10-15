@@ -5,8 +5,6 @@ import com.mkeeper.exception.ServiceException;
 import com.mkeeper.model.ScheduleJob;
 import com.mkeeper.utils.ScheduleUtil;
 import org.quartz.Scheduler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,8 +20,6 @@ public class JobService {
 
     @Resource
     private Scheduler scheduler;
-
-    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     public List<ScheduleJob> getAllEnableJob() {
         return jobDao.getAllEnableJob();
