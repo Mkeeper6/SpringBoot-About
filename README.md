@@ -44,7 +44,7 @@
 - 4.1.8 Sharding Jdbc分库分表(未完成)
 
 ## 5 SpringBoot 缓存
-- 5.1.1 Spring Cache
+- 5.1.1 SpringBoot Cache入门
 - 5.1.2 Spring Cache EhCache(未完成)
 - 5.1.3 Spring Cache Redis(未完成)
 - 5.1.4 Spring Cache EhCache Redis 两级缓存
