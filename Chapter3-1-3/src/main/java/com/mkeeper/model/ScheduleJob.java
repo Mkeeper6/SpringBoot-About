@@ -5,6 +5,18 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
+
+//    {
+//        "className": "com.mkeeper.job.TestJob",
+//        "cronExpression": "*/10 * * * * ?",
+//        "jobName": "testJob",
+//        "jobGroup": "TEST_GROUP",
+//        "triggerName": "TEST_TRIGGER",
+//        "triggerGroup": "TEST_GROUP",
+//        "pause": true,
+//        "enable": true,
+//        "description": "test Job for SpringBoot",
+//    }
 @Data
 public class ScheduleJob implements Serializable {
 

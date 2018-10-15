@@ -2,13 +2,11 @@ package com.mkeeper.utils;
 
 import com.mkeeper.exception.ServiceException;
 import com.mkeeper.model.ScheduleJob;
+import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+@Slf4j
 public class ScheduleUtil {
-
-    private final static Logger logger = LoggerFactory.getLogger(ScheduleUtil.class);
 
     /**
      * 获取 Trigger Key
@@ -78,14 +76,14 @@ public class ScheduleUtil {
 
             scheduler.scheduleJob(jobDetail, cronTrigger);
 
-            logger.info("Create schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
+            log.info("Create schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
 
             if (scheduleJob.getPause()) {
                 pauseJob(scheduler, scheduleJob);
             }
         } catch (Exception e) {
             e.printStackTrace();
-            logger.error("Execute schedule job failed");
+            log.error("Execute schedule job failed");
             throw new ServiceException("Execute schedule job failed", e);
         }
     }
@@ -118,14 +116,14 @@ public class ScheduleUtil {
 
             scheduler.rescheduleJob(triggerKey, cronTrigger);
 
-            logger.info("Update schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
+            log.info("Update schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
 
             if (scheduleJob.getPause()) {
                 pauseJob(scheduler, scheduleJob);
             }
         } catch (SchedulerException e) {
             e.printStackTrace();
-            logger.error("Update schedule job failed");
+            log.error("Update schedule job failed");
             throw new ServiceException("Update schedule job failed", e);
         }
     }
@@ -140,10 +138,10 @@ public class ScheduleUtil {
     public static void run(Scheduler scheduler, ScheduleJob scheduleJob) throws ServiceException {
         try {
             scheduler.triggerJob(getJobKey(scheduleJob));
-            logger.info("Run schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
+            log.info("Run schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
         } catch (SchedulerException e) {
             e.printStackTrace();
-            logger.error("Run schedule job failed");
+            log.error("Run schedule job failed");
             throw new ServiceException("Run schedule job failed", e);
         }
     }
@@ -157,10 +155,10 @@ public class ScheduleUtil {
     public static void pauseJob(Scheduler scheduler, ScheduleJob scheduleJob) throws ServiceException {
         try {
             scheduler.pauseJob(getJobKey(scheduleJob));
-            logger.info("Pause schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
+            log.info("Pause schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
         } catch (SchedulerException e) {
             e.printStackTrace();
-            logger.error("Pause schedule job failed");
+            log.error("Pause schedule job failed");
             throw new ServiceException("Pause job failed", e);
         }
     }
@@ -175,10 +173,10 @@ public class ScheduleUtil {
     public static void resumeJob(Scheduler scheduler, ScheduleJob scheduleJob) throws ServiceException {
         try {
             scheduler.resumeJob(getJobKey(scheduleJob));
-            logger.info("Resume schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
+            log.info("Resume schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
         } catch (SchedulerException e) {
             e.printStackTrace();
-            logger.error("Resume schedule job failed");
+            log.error("Resume schedule job failed");
             throw new ServiceException("Resume job failed", e);
         }
     }
@@ -193,10 +191,10 @@ public class ScheduleUtil {
     public static void deleteJob(Scheduler scheduler, ScheduleJob scheduleJob) throws ServiceException {
         try {
             scheduler.deleteJob(getJobKey(scheduleJob));
-            logger.info("Delete schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
+            log.info("Delete schedule job {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
         } catch (SchedulerException e) {
             e.printStackTrace();
-            logger.error("Delete schedule job failed");
+            log.error("Delete schedule job failed");
             throw new ServiceException("Delete job failed", e);
         }
     }

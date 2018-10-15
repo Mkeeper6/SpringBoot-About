@@ -24,7 +24,7 @@ public class ApplicationListener implements CommandLineRunner {
     private Scheduler scheduler;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         // Run schedule job when Application startup
         List<ScheduleJob> scheduleJobList = jobService.getAllEnableJob();
         for (ScheduleJob scheduleJob : scheduleJobList) {
@@ -37,7 +37,7 @@ public class ApplicationListener implements CommandLineRunner {
                 }
                 log.info("Startup {}-{} success", scheduleJob.getJobGroup(), scheduleJob.getJobName());
             } catch (ServiceException e) {
-                e.printStackTrace();
+                log.error("Job ERROR", e);
             }
         }
     }

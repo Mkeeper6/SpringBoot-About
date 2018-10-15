@@ -34,7 +34,7 @@ public class JobController {
         return R.isOk().data(jobService.delete(jobId));
     }
 
-    @PostMapping("/save")
+    @PostMapping("/add")
     public R saveJob(@RequestBody ScheduleJob newScheduleJob) throws ServiceException {
         return R.isOk().data(jobService.add(newScheduleJob));
     }
