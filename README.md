@@ -66,13 +66,13 @@
 
 ## 9 SpringBoot Session
 
-## 10 SpringBoot Security
+## 10 SpringBoot 安全
 
 ## 11 SpringBoot WebSockets
 
 ## 12 SpringBoot Actuator
 
-## 13 SpringBoot Testing
+## 13 SpringBoot 单元测试
 
 
 ## 工具篇
