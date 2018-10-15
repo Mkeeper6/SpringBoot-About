@@ -88,7 +88,6 @@ public class ScheduleUtil {
         }
     }
 
-
     /**
      * 更新任务
      *
@@ -198,6 +197,7 @@ public class ScheduleUtil {
             throw new ServiceException("Delete job failed", e);
         }
     }
+
     /**
      * 校验Cron表达式
      */
