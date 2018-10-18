@@ -11,7 +11,6 @@ import javax.sql.DataSource;
 
 @Configuration
 public class ScheduleConfig {
-
     @Autowired
     private ScheduleJobFactory scheduleJobFactory;
 
