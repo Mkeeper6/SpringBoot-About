@@ -1,3 +1,4 @@
+#数据库连接池配置
 spring:
   datasource:
     name: mysql_test
@@ -28,11 +29,13 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
+  #Quartz配置
   quartz:
     jdbc:
       initialize-schema: always
     job-store-type: jdbc
 
+##Mybatis配置
 mybatis:
   #Mapper.xml所在的位置
   mapper-locations: classpath:mapping/*.xml
