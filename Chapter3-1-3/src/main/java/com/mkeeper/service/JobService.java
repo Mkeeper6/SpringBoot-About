@@ -14,7 +14,6 @@ import java.util.List;
 
 @Service
 public class JobService {
-
     @Resource
     private JobMapper jobMapper;
 
@@ -92,7 +91,6 @@ public class JobService {
         ScheduleUtil.run(scheduler, scheduleJob);
         return true;
     }
-
 
     private ScheduleJob updateScheduleJobStatus(Long jobId, Boolean isPause) throws ServiceException {
         ScheduleJob scheduleJob = select(jobId);
