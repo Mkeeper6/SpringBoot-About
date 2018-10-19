@@ -42,6 +42,7 @@ mybatis:
   #entity扫描的包名
   type-aliases-package: com.mkeeper.entity
 
-
+swagger:
+  enable: true
 
 
