@@ -13,6 +13,13 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.List;
 
+
+/**
+ *     启动应用时运行定时任务
+ *
+ * @author mkeeper
+ * @create 2018/10/19 10:05
+ */
 @Slf4j
 @Component
 public class ApplicationListener implements CommandLineRunner {
@@ -25,7 +32,6 @@ public class ApplicationListener implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        // Run schedule job when Application startup
         List<ScheduleJob> scheduleJobList = jobService.getAllEnableJob();
         for (ScheduleJob scheduleJob : scheduleJobList) {
             try {
