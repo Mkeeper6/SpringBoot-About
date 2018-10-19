@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
-public interface JobDao {
+public interface JobMapper {
     ScheduleJob select(long id);
 
     Integer update(ScheduleJob scheduleJob);

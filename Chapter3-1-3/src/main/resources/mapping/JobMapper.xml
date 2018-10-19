@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.mkeeper.dao.JobDao">
+<mapper namespace="com.mkeeper.dao.JobMapper">
 
     <sql id="baseColumnSql">
         id, class_name, cron_expression, job_name, job_group, trigger_name, trigger_group, pause,

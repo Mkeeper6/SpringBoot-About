@@ -1,6 +1,6 @@
 package com.mkeeper.service;
 
-import com.mkeeper.dao.JobDao;
+import com.mkeeper.dao.JobMapper;
 import com.mkeeper.exception.ServiceException;
 import com.mkeeper.model.ScheduleJob;
 import com.mkeeper.utils.ScheduleUtil;
@@ -16,17 +16,17 @@ import java.util.List;
 public class JobService {
 
     @Resource
-    private JobDao jobDao;
+    private JobMapper jobMapper;
 
     @Resource
     private Scheduler scheduler;
 
     public List<ScheduleJob> getAllEnableJob() {
-        return jobDao.getAllEnableJob();
+        return jobMapper.getAllEnableJob();
     }
 
     public ScheduleJob select(Long jobId) throws ServiceException {
-        ScheduleJob scheduleJob = jobDao.select(jobId);
+        ScheduleJob scheduleJob = jobMapper.select(jobId);
         if (scheduleJob == null) {
             throw new ServiceException("ScheduleJob:" + jobId + " not found");
         }
@@ -36,7 +36,7 @@ public class JobService {
     @Transactional(rollbackFor = DataAccessException.class)
     public ScheduleJob update(Long jobId, ScheduleJob scheduleJob) throws ServiceException {
 
-        if (jobDao.update(scheduleJob) <= 0) {
+        if (jobMapper.update(scheduleJob) <= 0) {
             throw new ServiceException("Update product:" + jobId + "failed");
         }
 
@@ -47,7 +47,7 @@ public class JobService {
 
     @Transactional(rollbackFor = DataAccessException.class)
     public boolean add(ScheduleJob scheduleJob) throws ServiceException {
-        Integer num = jobDao.insert(scheduleJob);
+        Integer num = jobMapper.insert(scheduleJob);
         if (num <= 0) {
             throw new ServiceException("Add product failed");
         }
@@ -61,7 +61,7 @@ public class JobService {
     public boolean delete(Long jobId) throws ServiceException {
         ScheduleJob scheduleJob = select(jobId);
 
-        Integer num = jobDao.delete(jobId);
+        Integer num = jobMapper.delete(jobId);
         if (num <= 0) {
             throw new ServiceException("Delete product:" + jobId + "failed");
         }
@@ -72,7 +72,7 @@ public class JobService {
     }
 
     public List<ScheduleJob> getAllJob() {
-        return jobDao.getAllJob();
+        return jobMapper.getAllJob();
     }
 
     public boolean resume(Long jobId) throws ServiceException {
