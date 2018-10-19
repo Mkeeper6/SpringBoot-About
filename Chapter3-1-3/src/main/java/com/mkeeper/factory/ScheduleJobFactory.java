@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ScheduleJobFactory extends AdaptableJobFactory {
+    // 让不受spring管理的类具有spring自动注入的特性
     @Autowired
     private AutowireCapableBeanFactory autowireCapableBeanFactory;
 
