@@ -8,7 +8,6 @@
 
 ![公众号](https://oscimg.oschina.net/oscnet/e8870411cf89e55a4b07e131382e0f51e73.jpg)
 
-
 ## 1 项目搭建
 - [1.1.1 SpringBoot 项目搭建](http://www.mkeeper.club/2018/06/29/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B1-1-1%20%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/)
 - [1.1.2 常用配置介绍](http://www.mkeeper.club/2018/07/02/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B1-1-2%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/)
@@ -49,13 +48,11 @@
 - 5.1.3 Spring Cache Redis(未完成)
 - 5.1.4 Spring Cache EhCache Redis 两级缓存
 
-
 ## 6 SpringBoot NoSQL
 - 6.1.1 Redis(未完成)
 - 6.1.2 MongoDb(未完成)
 - 6.1.3 Elasticsearch(未完成)
 - 6.1.2 MongoDb(未完成)
-
 
 ## 7 SpringBoot 消息队列
 - 7.1.1 RocketMQ快速整合
@@ -73,7 +70,6 @@
 ## 12 SpringBoot Actuator
 
 ## 13 SpringBoot 单元测试
-
 
 ## 工具篇
 - Lombok(未完成)
