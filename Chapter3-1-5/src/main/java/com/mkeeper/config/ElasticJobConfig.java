@@ -2,9 +2,9 @@ package com.mkeeper.config;
 
 import com.dangdang.ddframe.job.event.JobEventConfiguration;
 import com.dangdang.ddframe.job.event.rdb.JobEventRdbConfiguration;
-import com.dangdang.ddframe.job.lite.api.listener.ElasticJobListener;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperConfiguration;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
+import com.mkeeper.listener.ElasticJobListener;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -45,6 +45,11 @@ public class ElasticJobConfig {
         return new JobEventRdbConfiguration(dataSource);
     }
 
+    /**
+     * 分布式的任务监听器
+     *
+     * @return
+     */
     @Bean
     public ElasticJobListener elasticJobListener(){
         return new ElasticJobListener(100, 100);
