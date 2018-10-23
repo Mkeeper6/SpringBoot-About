@@ -1,12 +1,15 @@
-regCenter:
-  serverList: localhost:2181
-  namespace: elastic-job-lite-springboot
-stockJob:
-  cron: 0/5 * * * * ?
-  shardingItemParameters: 0=Chengdu0,1=Chengdu1
-  shardingTotalCount: 2
-debug: true
+elasticJob:
+  serverLists: 127.0.0.1:2181
+  namespace: elastic-job
 
-#stockJob.cron为定时任务的cron表达式
-#stockJob.shardingItemParameters为任务分片携带的参数
-#stockJob.shardingTotalCount为任务的分数量（即同时同时开几个定时任务）
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.mkeeper.model
+
