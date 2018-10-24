@@ -1,26 +1,19 @@
 package com.mkeeper.config;
 
 import com.xxl.job.core.executor.XxlJobExecutor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * xxl-job config
- *
- * @author xuxueli 2017-04-28
- */
+@Slf4j
 @Configuration
-//@ComponentScan(basePackages = "com.xxl.job.executor.service.jobhandler")
 public class XxlJobConfig {
-    private Logger logger = LoggerFactory.getLogger(XxlJobConfig.class);
 
     @Value("${xxl.job.admin.addresses}")
-    private String adminAddresses;
+    private String addresses;
 
-    @Value("${xxl.job.executor.appname}")
+    @Value("${xxl.job.executor.appName}")
     private String appName;
 
     @Value("${xxl.job.executor.ip}")
@@ -32,18 +25,17 @@ public class XxlJobConfig {
     @Value("${xxl.job.accessToken}")
     private String accessToken;
 
-    @Value("${xxl.job.executor.logpath}")
+    @Value("${xxl.job.executor.logPath}")
     private String logPath;
 
-    @Value("${xxl.job.executor.logretentiondays}")
+    @Value("${xxl.job.executor.logRetentionDays}")
     private int logRetentionDays;
-
 
     @Bean(initMethod = "start", destroyMethod = "destroy")
     public XxlJobExecutor xxlJobExecutor() {
-        logger.info(">>>>>>>>>>> xxl-job config init.");
+        log.info(">>>>>>>>>>> xxl-job config init.");
         XxlJobExecutor xxlJobExecutor = new XxlJobExecutor();
-        xxlJobExecutor.setAdminAddresses(adminAddresses);
+        xxlJobExecutor.setAdminAddresses(addresses);
         xxlJobExecutor.setAppName(appName);
         xxlJobExecutor.setIp(ip);
         xxlJobExecutor.setPort(port);

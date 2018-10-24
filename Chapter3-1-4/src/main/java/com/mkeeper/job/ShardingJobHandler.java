@@ -5,21 +5,19 @@ import com.xxl.job.core.handler.IJobHandler;
 import com.xxl.job.core.handler.annotation.JobHandler;
 import com.xxl.job.core.util.ShardingUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 
 /**
  * 分片广播任务
- *
- * @author xuxueli 2017-07-25 20:56:50
  */
 @JobHandler(value="shardingJobHandler")
-@Service
+@Component
 @Slf4j
 public class ShardingJobHandler extends IJobHandler {
 
     @Override
-    public ReturnT<String> execute(String param) throws Exception {
+    public ReturnT<String> execute(String param) {
 
         // 分片参数
         ShardingUtil.ShardingVO shardingVO = ShardingUtil.getShardingVo();
