@@ -26,6 +26,5 @@ public class TimerDemo {
         // delay：延迟时间（以毫秒为单位）
         // period：间隔时间（以毫秒为单位）
         timer.schedule(timerTask, 5000, 3000);
-
     }
 }
