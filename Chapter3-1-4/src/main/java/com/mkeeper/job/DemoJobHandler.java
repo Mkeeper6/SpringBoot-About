@@ -22,5 +22,4 @@ public class DemoJobHandler extends IJobHandler {
 
         return SUCCESS;
     }
-
 }

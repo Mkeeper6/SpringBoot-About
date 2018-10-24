@@ -45,5 +45,4 @@ public class XxlJobConfig {
 
         return xxlJobExecutor;
     }
-
 }

@@ -15,5 +15,6 @@ xxl:
       logRetentionDays: -1
     ### xxl-job, access token：执行器通讯TOKEN，非空时启用
     accessToken:
+
 server:
   port: 8081
