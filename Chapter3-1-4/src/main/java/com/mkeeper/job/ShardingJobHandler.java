@@ -21,14 +21,14 @@ public class ShardingJobHandler extends IJobHandler {
 
         // 分片参数
         ShardingUtil.ShardingVO shardingVO = ShardingUtil.getShardingVo();
-        log.info("分片参数：当前分片序号 = {0}, 总分片数 = {1}", shardingVO.getIndex(), shardingVO.getTotal());
+        log.info("分片参数：当前分片序号 = {}, 总分片数 = {}", shardingVO.getIndex(), shardingVO.getTotal());
 
         // 业务逻辑
         for (int i = 0; i < shardingVO.getTotal(); i++) {
             if (i == shardingVO.getIndex()) {
-                log.info("第 {0} 片, 命中分片开始处理", i);
+                log.info("第 {} 片, 命中分片开始处理", i);
             } else {
-                log.info("第 {0} 片, 忽略", i);
+                log.info("第 {} 片, 忽略", i);
             }
         }
 
