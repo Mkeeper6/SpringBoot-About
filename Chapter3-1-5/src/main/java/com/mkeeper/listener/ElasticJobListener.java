@@ -2,7 +2,7 @@ package com.mkeeper.listener;
 
 import com.dangdang.ddframe.job.executor.ShardingContexts;
 import com.dangdang.ddframe.job.lite.api.listener.AbstractDistributeOnceElasticJobListener;
-import com.mkeeper.dao.TaskMapper;
+import com.mkeeper.mapper.JobTaskMapper;
 import com.mkeeper.model.JobTask;
 
 import javax.annotation.Resource;
@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 public class ElasticJobListener extends AbstractDistributeOnceElasticJobListener {
 
     @Resource
-    private TaskMapper taskMapper;
+    private JobTaskMapper jobTaskMapper;
 
     public ElasticJobListener(long startedTimeoutMilliseconds, long completedTimeoutMilliseconds) {
         super(startedTimeoutMilliseconds, completedTimeoutMilliseconds);
@@ -29,8 +29,8 @@ public class ElasticJobListener extends AbstractDistributeOnceElasticJobListener
     @Override
     public void doAfterJobExecutedAtLastCompleted(ShardingContexts shardingContexts) {
         //任务执行完成后更新状态为已执行
-        JobTask jobTask = taskMapper.findById(Integer.valueOf(shardingContexts.getJobParameter()));
+        JobTask jobTask = jobTaskMapper.selectByPrimaryKey(Integer.valueOf(shardingContexts.getJobParameter()));
         jobTask.setStatus(1);
-        taskMapper.update(jobTask);
+        jobTaskMapper.updateByPrimaryKeySelective(jobTask);
     }
 }
