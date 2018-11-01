@@ -40,7 +40,7 @@
 - 4.1.5 SpringBoot Mybatis Druid 多数据(未完成)
 - 4.1.6 Sharding Jdbc动态数据源(未完成)
 - 4.1.7 Sharding Jdbc读写分离(未完成)
-- 4.1.8 Sharding Jdbc分库分表(未完成)
+- 4.1.8 Sharding Jdbc分库分表
 
 ## 5 SpringBoot 缓存
 - 5.1.1 SpringBoot Cache入门
