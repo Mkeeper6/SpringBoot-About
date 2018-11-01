@@ -8,7 +8,7 @@ import java.util.Objects;
 /**
  *    根据指定时间生成cron表达式
  *
- * @author liulei2
+ * @author mkeeper
  * @create 2018/10/23 20:21
  */
 public class CronUtils {
