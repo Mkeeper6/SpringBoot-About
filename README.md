@@ -29,7 +29,7 @@
 - 3.1.1 [简单定时任务方法介绍](http://www.mkeeper.club/2018/09/28/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B3-1-1%20%E7%AE%80%E5%8D%95%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/)
 - 3.1.2 [Quartz定时任务快速整合](http://www.mkeeper.club/2018/10/08/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B3-1-2%20Quartz%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E5%BF%AB%E9%80%9F%E6%95%B4%E5%90%88/)
 - 3.1.3 [Quartz定时任务单点持久化](http://www.mkeeper.club/2018/10/19/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B3-1-3%20Quartz%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E5%8D%95%E7%82%B9%E6%8C%81%E4%B9%85%E5%8C%96/)
-- 3.1.4 xxl-job快速整合
+- 3.1.4 [xxl-job快速整合](http://www.mkeeper.club/2018/11/01/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B3-1-4%20xxl-job%E5%BF%AB%E9%80%9F%E6%95%B4%E5%90%88/)
 - 3.1.5 Elastic-Job-lite快速整合
 
 ## 4 SpringBoot 数据库开发
