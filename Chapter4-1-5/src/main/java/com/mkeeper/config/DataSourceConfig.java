@@ -32,7 +32,6 @@ public class DataSourceConfig {
 
 
     @Bean(name = "dbOneDataSource")
-    //@ConfigurationProperties(prefix = "datasource1")
     @Primary
     public DataSource dbOneDataSource() {
         return this.bulidDataSource(db1DriverClass, db1Url, db1UserName, db1Password);
