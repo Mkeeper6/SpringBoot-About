@@ -20,7 +20,7 @@ public class Chapter315Main implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... strings) throws Exception {
+    public void run(String... strings) {
         elasticJobService.scanAddJob();
     }
 }
