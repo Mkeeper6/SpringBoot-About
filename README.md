@@ -33,11 +33,11 @@
 - 3.1.5 Elastic-Job-lite快速整合
 
 ## 4 SpringBoot 数据库开发
-- 4.1.1 JdbcTemplate(未完成)
-- 4.1.2 SpringBoot Mybatis快速整合
-- 4.1.3 SpringBoot Mybatis-Plus快速整合
-- 4.1.4 SpringDataJpa(未完成)
-- 4.1.5 SpringBoot Mybatis Druid 多数据(未完成)
+- 4.1.1 使用JdbcTemplate操作数据库
+- 4.1.2 使用Mybatis操作数据库
+- 4.1.3 使用Mybatis-Plus操作数据库
+- 4.1.4 使用SpringDataJpa操作数据库(未完成)
+- 4.1.5 SpringBoot Mybatis多数据源配置
 - 4.1.6 Sharding Jdbc动态数据源(未完成)
 - 4.1.7 Sharding Jdbc读写分离(未完成)
 - 4.1.8 Sharding Jdbc分库分表 
