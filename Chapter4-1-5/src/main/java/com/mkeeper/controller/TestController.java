@@ -3,19 +3,19 @@ package com.mkeeper.controller;
 import com.mkeeper.entity.Stock;
 import com.mkeeper.mapper.one.OneStockMapper;
 import com.mkeeper.mapper.two.TwoStockMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class TestController {
 
-    @Autowired
+    @Resource
     private OneStockMapper oneStockMapper;
-    @Autowired
+    @Resource
     private TwoStockMapper twoStockMapper;
 
 
