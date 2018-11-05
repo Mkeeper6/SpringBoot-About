@@ -1,11 +1,18 @@
 package com.mkeeper.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
  * job_task
  * @author 
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class JobTask implements Serializable {
     private Integer id;
 
@@ -21,35 +28,10 @@ public class JobTask implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
+    public JobTask(String content, Integer status, Long updateTime) {
         this.content = content;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    public Long getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Long updateTime) {
         this.updateTime = updateTime;
     }
 }

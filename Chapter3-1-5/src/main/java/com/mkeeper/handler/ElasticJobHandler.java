@@ -9,9 +9,11 @@ import com.dangdang.ddframe.job.lite.spring.api.SpringJobScheduler;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
 import com.mkeeper.job.MyJob;
 import com.mkeeper.listener.ElasticJobListener;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+@Component
 public class ElasticJobHandler {
 
     @Resource

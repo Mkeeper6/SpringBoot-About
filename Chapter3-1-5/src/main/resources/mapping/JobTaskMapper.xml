@@ -7,25 +7,38 @@
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="update_time" jdbcType="BIGINT" property="updateTime" />
   </resultMap>
+
   <sql id="Base_Column_List">
     id, content, `status`, update_time
   </sql>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from job_task
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+  <select id="findAllUnDoTask" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from job_task
+    where status = 0
+  </select>
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from job_task
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.mkeeper.model.JobTask" useGeneratedKeys="true">
     insert into job_task (content, `status`, update_time
       )
     values (#{content,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{updateTime,jdbcType=BIGINT}
       )
   </insert>
+
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.mkeeper.model.JobTask" useGeneratedKeys="true">
     insert into job_task
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -51,6 +64,7 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.mkeeper.model.JobTask">
     update job_task
     <set>
@@ -66,6 +80,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
   <update id="updateByPrimaryKey" parameterType="com.mkeeper.model.JobTask">
     update job_task
     set content = #{content,jdbcType=VARCHAR},
@@ -73,4 +88,6 @@
       update_time = #{updateTime,jdbcType=BIGINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
 </mapper>

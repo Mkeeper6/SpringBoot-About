@@ -1,4 +1,4 @@
-elasticJob:
+elastic-job:
   serverLists: 127.0.0.1:2181
   namespace: elastic-job
 
@@ -12,4 +12,3 @@ spring:
 mybatis:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.mkeeper.model
-debug: true

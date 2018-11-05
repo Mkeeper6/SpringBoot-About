@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "elasticJob")
+@ConfigurationProperties(prefix = "elastic-job")
 public class ElasticJobConfig {
     private String serverLists;
     private String namespace;
