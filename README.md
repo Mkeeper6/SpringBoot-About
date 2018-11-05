@@ -41,7 +41,7 @@
 - 4.1.6 Sharding Jdbc动态数据源(未完成)
 - 4.1.7 Sharding Jdbc读写分离(未完成)
 - 4.1.8 Sharding Jdbc分库分表
-- 4.1.9 Mybatis插件mybatis-generator-gui介绍，图形化生成配置文件
+- 4.1.9 Mybatis配置文件生成工具mybatis-generator-gui推荐
 
 ## 5 SpringBoot 缓存
 - 5.1.1 SpringBoot Cache入门
