@@ -33,7 +33,7 @@
 - 3.1.5 Elastic-Job-lite快速整合
 
 ## 4 SpringBoot 数据库开发
-- 4.1.1 使用JdbcTemplate操作数据库
+- 4.1.1 使用JdbcTemplate操作数据库(未完成)
 - 4.1.2 使用Mybatis操作数据库
 - 4.1.3 使用Mybatis-Plus操作数据库
 - 4.1.4 使用SpringDataJpa操作数据库(未完成)
@@ -47,7 +47,7 @@
 - 5.1.1 SpringBoot Cache入门
 - 5.1.2 Spring Cache EhCache(未完成)
 - 5.1.3 Spring Cache Redis(未完成)
-- 5.1.4 Spring Cache EhCache Redis 两级缓存
+- 5.1.4 Spring Cache EhCache Redis 两级缓存(未完成)
 
 ## 6 SpringBoot NoSQL
 - 6.1.1 Redis(未完成)
