@@ -40,7 +40,8 @@
 - 4.1.5 SpringBoot Mybatis多数据源配置
 - 4.1.6 Sharding Jdbc动态数据源(未完成)
 - 4.1.7 Sharding Jdbc读写分离(未完成)
-- 4.1.8 Sharding Jdbc分库分表 
+- 4.1.8 Sharding Jdbc分库分表
+- 4.1.9 Mybatis插件mybatis-generator-gui介绍，图形化生成配置文件
 
 ## 5 SpringBoot 缓存
 - 5.1.1 SpringBoot Cache入门
@@ -73,7 +74,6 @@
 
 ## 工具篇
 - Lombok(未完成)
-- Mybatis generator界面工具介绍
 - Maven多模块项目搭建(未完成)
 - swagger前后端分离接口文档工具介绍(未完成)
 - Nginx 负载均衡本地模拟
