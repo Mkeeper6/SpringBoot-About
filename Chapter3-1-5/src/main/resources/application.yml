@@ -1,7 +1,3 @@
-elastic-job:
-  serverLists: 127.0.0.1:2181
-  namespace: elastic-job
-
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
@@ -9,6 +5,18 @@ spring:
     username: root
     password: 123456
 
-mybatis:
-  mapper-locations: classpath:mapping/*.xml
-  type-aliases-package: com.mkeeper.model
+regCenter:
+  serverList: localhost:2181
+  namespace: elastic-job-lite-springboot
+
+simpleJob:
+  cron: 0/5 * * * * ?
+  shardingTotalCount: 3
+  shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+
+dataflowJob:
+  cron: 0/5 * * * * ?
+  shardingTotalCount: 3
+  shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+debug: true
+
