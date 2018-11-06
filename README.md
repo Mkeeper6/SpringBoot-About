@@ -38,7 +38,7 @@
 - 4.1.3 使用Mybatis-Plus操作数据库
 - 4.1.4 使用SpringDataJpa操作数据库(未完成)
 - 4.1.5 SpringBoot Mybatis多数据源配置
-- 4.1.6 Sharding Jdbc动态数据源(未完成)
+- 4.1.6 Sharding Jdbc多数据源配置(未完成)
 - 4.1.7 Sharding Jdbc读写分离(未完成)
 - 4.1.8 Sharding Jdbc分库分表
 - 4.1.9 Mybatis配置文件生成工具mybatis-generator-gui推荐
