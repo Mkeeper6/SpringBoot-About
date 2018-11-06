@@ -33,7 +33,7 @@
 - 3.1.5 Elastic-Job-lite快速整合
 
 ## 4 SpringBoot 数据库开发
-- 4.1.1 使用JdbcTemplate操作数据库(未完成)
+- 4.1.1 使用JdbcTemplate操作数据库及事务管理
 - 4.1.2 使用Mybatis操作数据库
 - 4.1.3 使用Mybatis-Plus操作数据库
 - 4.1.4 使用SpringDataJpa操作数据库(未完成)
