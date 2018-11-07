@@ -36,7 +36,7 @@
 - 4.1.1 使用JdbcTemplate操作数据库及事务管理
 - 4.1.2 使用Mybatis操作数据库
 - 4.1.3 使用Mybatis-Plus操作数据库
-- 4.1.4 使用SpringDataJpa操作数据库(未完成)
+- 4.1.4 使用SpringDataJpa操作数据库
 - 4.1.5 SpringBoot Mybatis多数据源配置
 - 4.1.6 Sharding Jdbc多数据源配置(未完成)
 - 4.1.7 Sharding Jdbc读写分离(未完成)
