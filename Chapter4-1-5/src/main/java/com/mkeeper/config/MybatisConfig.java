@@ -40,8 +40,6 @@ public class MybatisConfig {
         }
     }
 
-
-
     @Configuration
     @MapperScan(basePackages = {"com.mkeeper.mapper.two"},
             sqlSessionFactoryRef = "sqlSessionFactoryTwo",
