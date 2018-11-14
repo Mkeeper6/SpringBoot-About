@@ -21,12 +21,21 @@ sharding:
       sharding:
         tables:
           t_order:
+            actual-data-nodes: ds.t_order_$->{0..1}
+            table-strategy:
+              inline:
+                sharding-column: order_id
+                algorithm-expression: t_order_$->{order_id % 2}
+            key-generator-column-name: order_id
 
           t_order_item:
+            actual-data-nodes: ds.t_order_item_$->{0..2}
+            table-strategy:
+              inline:
+                sharding-column: order_id
+                algorithm-expression: t_order_item_$->{order_id % 2}
+            key-generator-column-name: order_item_id
 
-
-        props:
-          sql.show: true
 
 mybatis:
   mapperLocations: classpath:mapping/**/*.xml
