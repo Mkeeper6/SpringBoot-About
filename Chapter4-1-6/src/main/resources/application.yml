@@ -36,6 +36,5 @@ sharding:
                 algorithm-expression: t_order_item_$->{order_id % 2}
             key-generator-column-name: order_item_id
 
-
 mybatis:
   mapperLocations: classpath:mapping/**/*.xml
