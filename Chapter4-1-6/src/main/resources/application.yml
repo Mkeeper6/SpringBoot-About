@@ -10,7 +10,7 @@ sharding:
       names: ds
       ds:
         type: com.alibaba.druid.pool.DruidDataSource
-        url: jdbc:mysql://localhost:3306/demo_ds_0
+        url: jdbc:mysql://localhost:3306/demo_ds
         username: root
         password: 123456
         driver-class-name: com.mysql.jdbc.Driver
@@ -21,20 +21,21 @@ sharding:
       sharding:
         tables:
           t_order:
-            actual-data-nodes: ds.t_order_$->{0..1}
+            actual-data-nodes: ds.t_order_${0..1}
+            #key-generator-column-name: order_id
             table-strategy:
               inline:
-                sharding-column: order_id
-                algorithm-expression: t_order_$->{order_id % 2}
-            key-generator-column-name: order_id
-
+                sharding-column: user_id
+                algorithm-expression: t_order_${user_id % 2}
           t_order_item:
-            actual-data-nodes: ds.t_order_item_$->{0..2}
+            actual-data-nodes: ds.t_order_item_${0..2}
+            #key-generator-column-name: order_item_id
             table-strategy:
               inline:
-                sharding-column: order_id
-                algorithm-expression: t_order_item_$->{order_id % 2}
-            key-generator-column-name: order_item_id
+                sharding-column: user_id
+                algorithm-expression: t_order_item_${user_id % 3}
+        props:
+          sql.show: true
 
 mybatis:
   mapperLocations: classpath:mapping/**/*.xml
