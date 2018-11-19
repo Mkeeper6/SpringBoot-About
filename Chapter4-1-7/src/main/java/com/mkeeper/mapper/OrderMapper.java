@@ -3,7 +3,6 @@
 package com.mkeeper.mapper;
 
 import com.mkeeper.entity.Order;
-import org.apache.ibatis.annotations.Mapper;
 
 public interface OrderMapper {
     

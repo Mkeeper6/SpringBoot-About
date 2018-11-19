@@ -39,10 +39,11 @@
 - 4.1.4 使用SpringDataJpa操作数据库
 - 4.1.5 SpringBoot Mybatis多数据源配置
 - 4.1.6 Sharding Jdbc分表配置
-- 4.1.7 Sharding Jdbc分库配置(未完成)
+- 4.1.7 Sharding Jdbc分库配置
 - 4.1.8 Sharding Jdbc分库分表配置
 - 4.1.9 Sharding Jdbc主从配置(未完成)
-- 4.1.10 Mybatis配置文件生成工具mybatis-generator-gui推荐
+- 4.1.10 Sharding Jdbc主从分库分表配置(未完成)
+- 4.1.11 Mybatis配置文件生成工具mybatis-generator-gui推荐
 
 ## 5 SpringBoot 缓存
 - 5.1.1 SpringBoot Cache入门
