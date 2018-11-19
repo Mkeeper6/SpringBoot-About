@@ -32,19 +32,12 @@ sharding:
             algorithm-expression: ds_${user_id % 2}
         tables:
           t_order:
-            actual-data-nodes: ds_${0..1}.t_order_${0..1}
+            actual-data-nodes: ds_${0..1}.t_order
             key-generator-column-name: order_id
-            table-strategy:
-              inline:
-                sharding-column: order_id
-                algorithm-expression: t_order_${order_id % 2}
           t_order_item:
-              actual-data-nodes: ds_${0..1}.t_order_item_${0..1}
+              actual-data-nodes: ds_${0..1}.t_order_item
               key-generator-column-name: order_item_id
-              table-strategy:
-                inline:
-                  sharding-column: order_item_id
-                  algorithm-expression: t_order_item_${order_item_id % 2}
+
 
         props:
           sql.show: true
