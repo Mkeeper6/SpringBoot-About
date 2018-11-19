@@ -26,6 +26,7 @@ sharding:
         filters: stat,wall,log4j
     config:
       sharding:
+        defaultDataSourceName: ds_0
         default-database-strategy:
           inline:
             sharding-column: user_id
