@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * stock
- * @author 
+ * @author Mkeeper
  */
 public class Stock implements Serializable {
     private Integer id;
