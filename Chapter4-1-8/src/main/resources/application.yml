@@ -45,7 +45,6 @@ sharding:
                 inline:
                   sharding-column: order_item_id
                   algorithm-expression: t_order_item_${order_item_id % 2}
-
         props:
           sql.show: true
 
