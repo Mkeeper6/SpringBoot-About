@@ -30,13 +30,21 @@ public class SimpleJobConfig {
     }
     
     @Bean(initMethod = "init")
-    public JobScheduler simpleJobScheduler(final SimpleJob simpleJob, @Value("${simpleJob.cron}") final String cron, @Value("${simpleJob.shardingTotalCount}") final int shardingTotalCount,
+    public JobScheduler simpleJobScheduler(final SimpleJob simpleJob,
+                                           @Value("${simpleJob.cron}") final String cron,
+                                           @Value("${simpleJob.shardingTotalCount}") final int shardingTotalCount,
                                            @Value("${simpleJob.shardingItemParameters}") final String shardingItemParameters) {
-        return new SpringJobScheduler(simpleJob, regCenter, getLiteJobConfiguration(simpleJob.getClass(), cron, shardingTotalCount, shardingItemParameters), jobEventConfiguration);
+        return new SpringJobScheduler(simpleJob, regCenter,
+                getLiteJobConfiguration(simpleJob.getClass(), cron, shardingTotalCount, shardingItemParameters)
+                , jobEventConfiguration);
     }
     
-    private LiteJobConfiguration getLiteJobConfiguration(final Class<? extends SimpleJob> jobClass, final String cron, final int shardingTotalCount, final String shardingItemParameters) {
+    private LiteJobConfiguration getLiteJobConfiguration(final Class<? extends SimpleJob> jobClass,
+                                                         final String cron, final int shardingTotalCount,
+                                                         final String shardingItemParameters) {
         return LiteJobConfiguration.newBuilder(new SimpleJobConfiguration(JobCoreConfiguration.newBuilder(
-                jobClass.getName(), cron, shardingTotalCount).shardingItemParameters(shardingItemParameters).build(), jobClass.getCanonicalName())).overwrite(true).build();
+                jobClass.getName(), cron, shardingTotalCount).shardingItemParameters(shardingItemParameters).build(),
+                jobClass.getCanonicalName()))
+                                   .overwrite(true).build();
     }
 }

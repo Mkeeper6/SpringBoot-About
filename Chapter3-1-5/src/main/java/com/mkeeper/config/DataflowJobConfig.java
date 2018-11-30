@@ -11,11 +11,10 @@ import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
 import com.mkeeper.job.dataflow.SpringDataflowJob;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.Resource;
 
-@Configuration
+//@Configuration
 public class DataflowJobConfig {
     
     @Resource

@@ -12,7 +12,8 @@ import org.springframework.context.annotation.Configuration;
 public class RegistryCenterConfig {
     
     @Bean(initMethod = "init")
-    public ZookeeperRegistryCenter regCenter(@Value("${regCenter.serverList}") final String serverList, @Value("${regCenter.namespace}") final String namespace) {
+    public ZookeeperRegistryCenter regCenter(@Value("${regCenter.serverList}") final String serverList,
+                                             @Value("${regCenter.namespace}") final String namespace) {
         return new ZookeeperRegistryCenter(new ZookeeperConfiguration(serverList, namespace));
     }
 }
