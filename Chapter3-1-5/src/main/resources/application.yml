@@ -1,3 +1,4 @@
+# 数据源配置
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
@@ -5,10 +6,12 @@ spring:
     username: root
     password: 123456
 
+# zk配置
 regCenter:
   serverList: localhost:2181
   namespace: elastic-job-lite-springboot
 
+# 定时任务配置
 simpleJob:
   cron: 0/5 * * * * ?
   shardingTotalCount: 3
