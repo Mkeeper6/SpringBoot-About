@@ -16,3 +16,4 @@ public class RegistryCenterConfig {
                                              @Value("${regCenter.namespace}") final String namespace) {
         return new ZookeeperRegistryCenter(new ZookeeperConfiguration(serverList, namespace));
     }
+}
