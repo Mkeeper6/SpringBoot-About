@@ -21,9 +21,6 @@ public class UserServiceImplTest {
     @Resource
     private UserService userService;
 
-
-
-
     @Before
     public void setUp() {
         // 准备，清空user表
@@ -52,7 +49,7 @@ public class UserServiceImplTest {
 
     @Test
     public void transactionalTest(){
-
+        // 插入5个用户
         userService.create(User.builder().userName("a").password("123").phone("110").build());
         userService.create(User.builder().userName("b").password("1234").phone("119").build());
         userService.create(User.builder().userName("c").password("12345").phone("120").build());
