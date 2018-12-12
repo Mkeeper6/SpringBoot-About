@@ -2,10 +2,6 @@ package com.mkeeper.entity;
 
 import java.io.Serializable;
 
-/**
- * stock
- * @author 
- */
 public class Stock implements Serializable {
     private Integer id;
 
