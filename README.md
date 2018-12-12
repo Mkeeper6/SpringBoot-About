@@ -41,7 +41,7 @@
 - 4.1.6 Sharding Jdbc分表配置
 - 4.1.7 Sharding Jdbc分库配置
 - 4.1.8 Sharding Jdbc分库分表配置
-- 4.1.9 Sharding Jdbc主从配置(未完成)
+- 4.1.9 Sharding Jdbc主从配置
 - 4.1.10 Sharding Jdbc主从分库分表配置(未完成)
 - 4.1.11 Mybatis配置文件生成工具mybatis-generator-gui推荐
 
