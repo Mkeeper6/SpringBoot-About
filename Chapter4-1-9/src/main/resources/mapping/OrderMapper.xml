@@ -23,6 +23,10 @@
         #{status,jdbcType=VARCHAR}
         )
     </insert>
+
+    <select id="findById" resultType="com.mkeeper.entity.Order" parameterType="INTEGER">
+        select order_id as orderId, user_id as userId, status from t_order where order_id = #{orderId,jdbcType=INTEGER}
+    </select>
     
     <delete id="delete">
         DELETE FROM t_order WHERE order_id = #{orderId,jdbcType=INTEGER}

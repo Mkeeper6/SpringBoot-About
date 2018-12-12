@@ -3,7 +3,6 @@
 package com.mkeeper.mapper;
 
 import com.mkeeper.entity.Order;
-import org.apache.ibatis.annotations.Mapper;
 
 public interface OrderMapper {
     
@@ -11,9 +10,11 @@ public interface OrderMapper {
     
     void truncateTable();
     
-    Long insert(Order model);
+    Integer insert(Order model);
+
+    Order findById(Integer orderId);
     
-    void delete(Long orderId);
+    void delete(Integer orderId);
     
     void dropTable();
 }
