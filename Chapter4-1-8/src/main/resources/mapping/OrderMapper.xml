@@ -15,9 +15,10 @@
     
     <insert id="insert" useGeneratedKeys="true" keyProperty="orderId">
         INSERT INTO t_order (
-          user_id, status
+          order_id, user_id, status
         )
         VALUES (
+        #{orderId,jdbcType=INTEGER},
         #{userId,jdbcType=INTEGER},
         #{status,jdbcType=VARCHAR}
         )

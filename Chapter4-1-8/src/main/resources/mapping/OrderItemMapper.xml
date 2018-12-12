@@ -21,9 +21,10 @@
     
     <insert id="insert" useGeneratedKeys="true" keyProperty="orderItemId">
         INSERT INTO t_order_item (
-          order_id, user_id
+          order_item_id,order_id, user_id
         )
         VALUES (
+        #{orderItemId,jdbcType=INTEGER},
         #{orderId,jdbcType=INTEGER},
         #{userId,jdbcType=INTEGER}
         )
