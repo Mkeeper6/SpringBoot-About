@@ -42,3 +42,6 @@ sharding:
 
         props:
           sql.show: true
+
+mybatis:
+  mapperLocations: classpath:mapping/**/*.xml
