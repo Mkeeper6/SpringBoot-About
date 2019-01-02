@@ -34,7 +34,7 @@
 
 ## 4 SpringBoot 数据库开发
 - 4.1.1 [使用JdbcTemplate操作数据库及事务管理](http://www.mkeeper.club/2018/12/07/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B4-1-1%20%E4%BD%BF%E7%94%A8JdbcTemplate%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8A%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/)
-- 4.1.2 使用Mybatis操作数据库
+- 4.1.2 [使用Mybatis操作数据库](http://www.mkeeper.club/2018/12/29/SpringBoot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B4-1-2%20%E4%BD%BF%E7%94%A8Mybatis%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/)
 - 4.1.3 使用Mybatis-Plus操作数据库
 - 4.1.4 使用SpringDataJpa操作数据库
 - 4.1.5 SpringBoot Mybatis多数据源配置
