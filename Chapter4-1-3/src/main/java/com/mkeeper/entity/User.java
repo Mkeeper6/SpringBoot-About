@@ -13,8 +13,6 @@ import java.util.Date;
  */
 @SuppressWarnings("serial")
 public class User extends SuperEntity<User> {
-
-
     /**
      * 名称 , condition 属性设置注入
      * 等效于 SQL 为：WHERE name LIKE CONCAT('%',s值,'%')
