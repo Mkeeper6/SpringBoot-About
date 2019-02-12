@@ -43,7 +43,7 @@
 - 4.1.8 Sharding Jdbc分库分表配置
 - 4.1.9 Sharding Jdbc主从配置
 - 4.1.10 Sharding Jdbc主从分库分表配置(未完成)
-- 4.1.11 Mybatis配置文件生成工具mybatis-generator-gui推荐
+- 4.1.11 Mybatis配置文件生成工具mybatis-generator-gui推荐(未完成)
 
 ## 5 SpringBoot 缓存
 - 5.1.1 SpringBoot Cache入门
@@ -64,18 +64,18 @@
 ## 8 SpringBoot Dubbo
 - 8.1.1 Dubbo快速整合
 
-## 9 SpringBoot Session
+## 9 SpringBoot Session(未完成)
 
-## 10 SpringBoot 安全
+## 10 SpringBoot 安全(未完成)
 
-## 11 SpringBoot WebSockets
+## 11 SpringBoot WebSockets(未完成)
 
-## 12 SpringBoot Actuator
+## 12 SpringBoot Actuator(未完成)
 
-## 13 SpringBoot 单元测试
+## 13 SpringBoot 单元测试(未完成)
 
 ## 工具篇
 - Lombok(未完成)
 - Maven多模块项目搭建(未完成)
 - swagger前后端分离接口文档工具介绍(未完成)
-- Nginx 负载均衡本地模拟
+- Nginx 负载均衡本地模拟(未完成)
