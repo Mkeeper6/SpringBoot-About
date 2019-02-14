@@ -4,10 +4,10 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-		test_id AS testId, name, age, test_type AS testType, role, phone
+        test_id AS testId, name, age, test_type AS testType, role, phone
 	</sql>
 
     <delete id="deleteAll">
-		DELETE FROM USER
+        DELETE FROM USER
 	</delete>
 </mapper>
