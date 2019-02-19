@@ -35,7 +35,7 @@ public class Chapter413Main {
         SpringApplication app = new SpringApplication(Chapter413Main.class);
         app.setBannerMode(Banner.Mode.OFF);
         app.run(args);
-        //SpringApplication.run(Application.class, args);
+        SpringApplication.run(app, args);
         logger.info("PortalApplication is success!");
         System.err.println("sample started. http://localhost:8080/user/test");
         System.err.println("多租户插件配置： MybatisPlusConfig.paginationInterceptor(): paginationInterceptor.setSqlParserList(sqlParserList);");
