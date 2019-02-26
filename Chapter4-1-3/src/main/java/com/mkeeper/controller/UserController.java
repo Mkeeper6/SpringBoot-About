@@ -115,7 +115,6 @@ public class UserController {
      * 方式一：http://localhost:8080/user/page?size=1&current=1<br>
      * 方式二：http://localhost:8080/user/pagehelper?size=1&current=1<br>
      */
-
     // 参数模式分页
     @GetMapping("/page")
     public Object page(Page page) {
