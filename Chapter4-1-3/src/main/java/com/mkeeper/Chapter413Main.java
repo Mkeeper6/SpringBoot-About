@@ -43,5 +43,4 @@ public class Chapter413Main {
         System.err.println("自动填充插件：application.yml： mybatis-plus:global-config:meta-object-handler: xxxx");
         System.err.println("通用枚举注入: application.yml: mybatis-plus: typeEnumsPackage:  xxPackage");
     }
-
 }
