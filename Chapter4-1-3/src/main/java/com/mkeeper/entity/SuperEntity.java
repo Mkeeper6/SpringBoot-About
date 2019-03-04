@@ -9,7 +9,6 @@ import java.io.Serializable;
  * 演示实体父类
  */
 public class SuperEntity<T extends Model> extends Model<T> {
-
     /**
      * 主键ID , 这里故意演示注解可以无
      */
