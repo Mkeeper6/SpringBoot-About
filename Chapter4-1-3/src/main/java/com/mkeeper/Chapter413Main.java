@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @SpringBootApplication
 public class Chapter413Main {
-
     protected final static Logger logger = LoggerFactory.getLogger(Chapter413Main.class);
 
     /**
